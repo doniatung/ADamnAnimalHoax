@@ -48,6 +48,10 @@ public class Tile{
 	return endOfWord;
     }
 	
+    //changes the value of endOfWord to reflect whether or not it can be the end of a wor
+    public void setEnd(boolean bool){
+	endOfWord = bool;
+    }
 
 
 }
