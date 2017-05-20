@@ -3,9 +3,9 @@ PImage img;
 BoardTile[][] board = new BoardTile[15][15];
 
 void setup(){
-  size(757,569);
+  size(900,900);
   img = loadImage("startScreen.png");
-  board = initGrid(board);
+  initGrid();
 }
 
 void draw(){
@@ -30,9 +30,9 @@ void startScreen(){
 
 void gameScreen(){
   //size(800,800);
-  //initGrid();
+  initGrid();
   background(255);
-    for (int x = 0; x < 15; x++){
+  for (int x = 0; x < 15; x++){
     for (int y = 0; y < 15; y++){
       board[x][y].display();
     }
@@ -56,8 +56,7 @@ void startGame(){
 }
 
 
-BoardTile[][] initGrid(BoardTile[][] oldBoard) {
-  BoardTile[][] board = oldBoard;
+void initGrid() {
   for (int i = 0; i < 15; i++) {
     for (int j = 0; j < 15; j++) {
 
@@ -78,14 +77,14 @@ BoardTile[][] initGrid(BoardTile[][] oldBoard) {
         (i == 11 && ( j == 0 || j == 7 || j == 14)) ||
         (i == 12 && (j == 6 || j == 8)) ||
         (i == 14 && (j == 3 || j == 11))) {
-        board[i][j] = new BoardTile("lightBlue", 10+i*53, 10+j*53);
+        board[i][j] = new BoardTile("lightBlue", 10 + i*53, 10+j*53);
       }
 
       //create dark blue board tiles
       else if ((i == 1 && ( j == 5 || j == 9)) ||
-        (i == 4 && ( j == 1 || j == 5 || j == 9 || j == 13)) ||
-        (i == 9 && ( j == 5 || j == 9)) ||
-        (i == 13 && ( j == 1 || j == 5 || j == 9 || j == 13))) {
+        (i == 5 && ( j == 1 || j == 5 || j == 9 || j == 13)) ||
+        (i == 13 && ( j == 5 || j == 9)) ||
+        (i == 9 && ( j == 1 || j == 5 || j == 9 || j == 13))) {
         board[i][j] = new BoardTile("darkBlue", 10+i*53, 10+j*53);
       }
 
@@ -104,9 +103,6 @@ BoardTile[][] initGrid(BoardTile[][] oldBoard) {
       else {
         board[i][j] = new BoardTile("normal", 10+i*53, 10+j*53);
       }
-      j++;
     }
-    i++;
   }
-  return board;
 }
