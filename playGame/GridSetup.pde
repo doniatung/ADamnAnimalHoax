@@ -1,63 +1,6 @@
-int screen = 0;
-PImage img;
-BoardTile[][] board = new BoardTile[15][15];
-
-void setup(){
-  size(757,569);
-  img = loadImage("startScreen.png");
-  board = initGrid(board);
-}
-
-void draw(){
-  if (screen == 0){
-    startScreen();
-  }
-  else if (screen == 1){
-    gameScreen();
-  }
-  else if (screen == 2){
-    gameOverScreen();
-  }
-  else if (screen == 4){
-    optionsScreen();
-  }
-}
-
-void startScreen(){
-  background(0);
-  image(img,0,0);
-}
-
-void gameScreen(){
-  //size(800,800);
-  //initGrid();
-  background(255);
-    for (int x = 0; x < 15; x++){
-    for (int y = 0; y < 15; y++){
-      board[x][y].display();
-    }
-  }
-}
-
-void gameOverScreen(){
-}
-
-void optionsScreen(){
-}
-
-void mousePressed(){
-  if (screen==0){
-    startGame();
-  }
-}
-
-void startGame(){
-  screen = 1;
-}
-
-
-BoardTile[][] initGrid(BoardTile[][] oldBoard) {
-  BoardTile[][] board = oldBoard;
+/*void initGrid2() {
+  int x = 40;
+  int y = 40;
   for (int i = 0; i < 15; i++) {
     for (int j = 0; j < 15; j++) {
 
@@ -65,7 +8,7 @@ BoardTile[][] initGrid(BoardTile[][] oldBoard) {
       if ((i == 0 && (j == 0 || j == 7 || j == 14)) ||
         (i == 7 && (j == 0 || j == 14)) ||
         (i == 14 && (j == 0 || j == 7 || j == 14))) {
-        board[i][j] = new BoardTile("red", 10+i*53, 10+j*53);
+        board[i][j] = new BoardTile("red");
       }
 
       //creates light blue board tiles
@@ -78,7 +21,7 @@ BoardTile[][] initGrid(BoardTile[][] oldBoard) {
         (i == 11 && ( j == 0 || j == 7 || j == 14)) ||
         (i == 12 && (j == 6 || j == 8)) ||
         (i == 14 && (j == 3 || j == 11))) {
-        board[i][j] = new BoardTile("lightBlue", 10+i*53, 10+j*53);
+        board[i][j] = new BoardTile("lightBlue");
       }
 
       //create dark blue board tiles
@@ -86,7 +29,7 @@ BoardTile[][] initGrid(BoardTile[][] oldBoard) {
         (i == 4 && ( j == 1 || j == 5 || j == 9 || j == 13)) ||
         (i == 9 && ( j == 5 || j == 9)) ||
         (i == 13 && ( j == 1 || j == 5 || j == 9 || j == 13))) {
-        board[i][j] = new BoardTile("darkBlue", 10+i*53, 10+j*53);
+        board[i][j] = new BoardTile("darkBlue");
       }
 
       //create pink board tiles
@@ -99,14 +42,13 @@ BoardTile[][] initGrid(BoardTile[][] oldBoard) {
         (i == 11 && (j == 3 || j == 11)) ||
         (i == 12 && (j == 2 || j == 12)) ||
         (i == 13 && (j == 1 || j == 13))) {
-        board[i][j] = new BoardTile("pink", 10+i*53, 10+j*53);
+        board[i][j] = new BoardTile("pink");
       } 
       else {
-        board[i][j] = new BoardTile("normal", 10+i*53, 10+j*53);
+        board[i][j] = new BoardTile("normal");
       }
       j++;
     }
     i++;
   }
-  return board;
-}
+}*/
