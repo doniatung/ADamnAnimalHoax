@@ -2,7 +2,6 @@ Team Name: A Damn Animal Hoax
 Roster: Max Chan, Manahal Tabassum, Donia Tung 
 Period 1
 
-Proposal: Scrabble
 
 Features:
 General Scrabble features (i.e. placing a tile on the board, calculating score, adding tiles to a user’s deck)
@@ -37,3 +36,18 @@ By searching for the word in the text file, it can be determined whether the wor
 Based on letters in an array the computer has, stores all possible moves in a binary tree
 Decides most ‘profitable’ move based on value of letters down certain branches.
 Makes that move
+
+
+  Things completed~
+BoardTile Class, Tile Class
+The start screen
+The Scrabble Board
+  
+  
+  Things to do~
+Research the AI and work on it's implementation!!!!!!!!!!
+Placing Tiles on the board
+Calculating score
+Instructions Page
+Player Name 
+
