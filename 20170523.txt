@@ -1,0 +1,39 @@
+Team Name: A Damn Animal Hoax
+Roster: Max Chan, Manahal Tabassum, Donia Tung 
+Period 1
+
+Proposal: Scrabble
+
+Features:
+General Scrabble features (i.e. placing a tile on the board, calculating score, adding tiles to a user’s deck)
+Instructions Page
+Binary tree to keep track of the most profitable moves (to help simulate an opponent)
+Development of an AI so that the user can play against the computer
+Processing for GUI
+Implementing a text file containing all possible dictionary words.
+
+If We Have Time…
+Different sized boards
+Two-player scrabble 
+
+How do you Play?
+You will be able to play against the computer.
+Either the computer or you get to go first and place a word on the grid using the letters you or the computer have.
+Take turns placing words. The tiles can connect with another player’s and with your own. However, no tiles in a word can overlap other tiles.
+During your turn you are able to draw a tile as well. This will end your turn.
+When there are no more tiles to draw or a player has used all their tiles, the game ends and the winner is declared. The winner will be the player with the most points.
+
+
+How does it work?
+  In General~
+The tiles on the board are stored in a two-dimensional array of tiles. Each tile will have either int or boolean (or both!) variables that keep track of the value ascribed to it, as well as its value multiplier if it has one.
+The pile of letters/tiles from which the user takes new ones are stored in a stack with letters that are randomly added at the start of every new game.
+A user’s tiles are stored in an array. When a tile is drawn, a letter from the draw pile which is a stack is popped off and added to the user’s array. 
+Each letter will be assigned a static value as its point value
+Each time a word is played, a player will gain points based on the value assigned to the letter.
+By searching for the word in the text file, it can be determined whether the word being played is a valid word. If so, then place the word. If it is not, a new word must be played. 
+
+  The AI~
+Based on letters in an array the computer has, stores all possible moves in a binary tree
+Decides most ‘profitable’ move based on value of letters down certain branches.
+Makes that move
