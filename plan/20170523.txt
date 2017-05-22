@@ -50,4 +50,5 @@ Placing Tiles on the board
 Calculating score
 Instructions Page
 Player Name 
+Displaying player's array and points on screen 
 
