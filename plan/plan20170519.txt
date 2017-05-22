@@ -1,0 +1,36 @@
+a2p1_propro_[A Damn Animal Hoax]
+
+Team Name: A Damn Animal Hoax
+Roster: Max Chan, Manahal Tabassum, Donia Tung 
+Period 1
+
+Proposal: Scrabble
+
+Which features are most crucial:
+- Making the Board Class, Tile Class, and the algorithm for the AI.
+- Getting the GUI up and running by starting with the board displayed as well as the tiles that tha player has and the draw pile.
+
+
+Which components constitute core functionality (vs non-essential)?
+- Allowing for the player to play their words and draw from the draw pile.
+- Ensuring that the AI is functional.
+- Determining whether a word can be played by checking the legitimacy of the word as well as if there is room on the board.
+- Adding up points for tiles.
+
+Which components are prerequisites for others?
+- Having the Tile Class working as it allows for all the tiles to be made.
+- Being able to see the GUI running the program.
+- The Board class is needed in order to place the Tiles and keep track of what's on the board.
+
+
+Which tasks can be delegated, and which must be collaboratively tackled?
+- Delegated:
+  - Creating the start screen
+  - Creating the tile class which only contains instance variables and accessors
+  - Creating the Board Class.
+- Collaboratively:
+  - The algorithm for the AI
+  - The GUI for actually playing the game.
+  
+What is the timeline, and how does it accommodate setbacks, course changes?
+
