@@ -11,8 +11,14 @@ Scrabble
 ------------------------------------------
 OBSTACLES OVERCOME
 
+Dragging tiles to play: How to best calculate which board tile to change, if not precise?
+
+Solution: Either use distance formula or just two clicks instead
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 UNRESOLVED ISSUES
+
+How will the computer take account of the tiles on the board when creating words?
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 COOL STUFF LEARNED
@@ -49,6 +55,14 @@ MT ::
 All members :: 
 DT :: Created the BoardTile class with accessors and mutators. 
 MC :: 
+MT :: 
+==============================================================
+
+2017-05-22
+--------------------------------------------------------------
+All members :: 
+DT ::
+MC :: Created Player class, and methods.  Unable to push b/c Stuy computers froze 
 MT :: 
 ==============================================================
 
