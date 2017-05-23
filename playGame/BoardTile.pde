@@ -6,11 +6,11 @@ public class BoardTile {
   String type;
   int xpos;
   int ypos;
-  final color PINK = color(233,150,122);
-  final color DEFAULT = color(250,235,215);
-  final color DARK_BLUE = color(30,144,255);
-  final color LIGHT_BLUE = color(135,206,250);
-  final color RED = color(178,34,34);
+  final color PINK = color(233, 150, 122);
+  final color DEFAULT = color(250, 235, 215);
+  final color DARK_BLUE = color(30, 144, 255);
+  final color LIGHT_BLUE = color(135, 206, 250);
+  final color RED = color(178, 34, 34);
 
   public BoardTile(String tileType, int newXPos, int newYPos) {
     type = tileType;
@@ -47,22 +47,17 @@ public class BoardTile {
 
   void display() {
     stroke(0);
-    if (type.equals("red")){
+    if (type.equals("red")) {
       fill(RED);
-    }
-    else if (type.equals("darkBlue")){
+    } else if (type.equals("darkBlue")) {
       fill(DARK_BLUE);
-    }
-    else if (type.equals("lightBlue")){
+    } else if (type.equals("lightBlue")) {
       fill(LIGHT_BLUE);
-    }
-    else if (type.equals("pink")){
+    } else if (type.equals("pink")) {
       fill(PINK);
-    }
-    else{
+    } else {
       fill(DEFAULT);
     }
-    rect(xpos, ypos, 40, 40);
-    println(xpos);
+    rect (xpos, ypos, 30, 30);
   }
 }

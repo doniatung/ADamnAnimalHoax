@@ -3,11 +3,11 @@ PImage img;
 BoardTile[][] board = new BoardTile[15][15];
 int instructionWidth = 70;
 int instructionHeight = 40;
-int instructionX = 900 - instructionWidth - 10;
+int instructionX = 625 - instructionWidth - 10;
 int instructionY = height - instructionHeight - 10;
 
 void setup(){
-  size(900,900);
+  size(650,650);
   img = loadImage("startScreen.png");
   initGrid();
 }
@@ -47,9 +47,12 @@ void gameScreen(){
   background(255);
   rect(instructionX, instructionY, instructionWidth, instructionHeight, 7);
   fill(255);
-  textSize(15);
-  text("Instructions", instructionX, instructionY);
-  fill(0, 102, 153);
+  textAlign(CENTER,CENTER);
+  fill(255);
+  textSize(10);
+  text("Instructions", instructionX + (instructionWidth / 2), instructionY + (instructionHeight/2));
+  //text("Instructions", instructionX, instructionY);
+  //fill(0, 102, 153);
   for (int x = 0; x < 15; x++){
     for (int y = 0; y < 15; y++){
       board[x][y].display();
