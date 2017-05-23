@@ -19,7 +19,7 @@ void draw(){
     gameOverScreen();
   }
   else if (screen == 4){
-    optionsScreen();
+    optionsPage();
   }
   else if (screen == 5){
     instructionsPage();
