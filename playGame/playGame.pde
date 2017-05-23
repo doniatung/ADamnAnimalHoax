@@ -73,7 +73,7 @@ void instructionsPage(){
   String[] lines = loadStrings("instructions.txt");
   for (int i = 0; i < lines.length; i++){
     text(lines[i], 50, 125, 750);
-    fill(0, 102, 153);
+    fill(#401F1F);
   }
 
 }
