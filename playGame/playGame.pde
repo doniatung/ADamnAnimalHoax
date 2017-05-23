@@ -36,8 +36,6 @@ void startScreen(){
   fill(255);
   textSize(5);
   text("Instructions", instructionX, instructionY);
-  //fill(0, 102, 153);
-  //so idk how to fix this...
   image(img,0,0);
 }
 
@@ -72,9 +70,12 @@ void instructionsPage(){
   text("Instructions!", width/2 -100 , 40); 
   fill(0, 102, 153);
   textSize(15);
-  String x = "yo yo yo ";
-  text(x, 50, 125, 750);
-  fill(0, 102, 153);
+  String[] lines = loadStrings("instructions.txt");
+  for (int i = 0; i < lines.length; i++){
+    text(lines[i], 50, 125, 750);
+    fill(0, 102, 153);
+  }
+
 }
 
 void mousePressed(){
