@@ -75,7 +75,7 @@ void mousePressed(){
   }
 }
 
-void overOptions(){
+boolean overOptions(){
 }
 void startGame(){
   screen = 1;
