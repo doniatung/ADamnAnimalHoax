@@ -1,10 +1,6 @@
 int screen = 0;
 PImage img;
 BoardTile[][] board = new BoardTile[15][15];
-int instructionWidth = 70;
-int instructionHeight = 40;
-int instructionX = 625 - instructionWidth - 10;
-int instructionY = height - instructionHeight - 10;
 
 void setup(){
   size(650,650);
@@ -27,6 +23,9 @@ void draw(){
   }
   else if (screen == 5){
     instructionsPage();
+  }
+  else if (screen == 6){
+    optionsPage();
   }
 }
 
@@ -61,12 +60,15 @@ void gameScreen(){
 void gameOverScreen(){
 }
 
-void optionsScreen(){
+void optionsPage(){
 }
 
 void mousePressed(){
   if (screen == 5 || overInstructions()){
     instructionsPage();
+  }
+  if (screen == 5 || overOptions()){
+    optionsPage();
   }
   if (screen==0){
     startGame();

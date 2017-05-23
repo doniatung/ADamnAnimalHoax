@@ -1,3 +1,8 @@
+int instructionWidth = 70;
+int instructionHeight = 40;
+int instructionX = 625 - instructionWidth - 10;
+int instructionY = height - instructionHeight - 10;
+
 boolean overInstructions()  {
   if (mouseX >= instructionX  && mouseX <= instructionX + instructionWidth && 
       mouseY >= instructionY && mouseY <= instructionY + instructionHeight) {
