@@ -60,8 +60,6 @@ void gameScreen(){
 void gameOverScreen(){
 }
 
-void optionsPage(){
-}
 
 void mousePressed(){
   if (screen == 5 || overInstructions()){
@@ -75,8 +73,6 @@ void mousePressed(){
   }
 }
 
-boolean overOptions(){
-}
 void startGame(){
   screen = 1;
 }
