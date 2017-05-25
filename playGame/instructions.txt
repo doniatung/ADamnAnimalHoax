@@ -3,9 +3,9 @@ The first player combines two or more of his or her letters to form a word and
 places it on the board to read either across or down with one letter on the 
 center square. Diagonal words are not allowed.
 #2
-Complete your turn by counting and announcing your score for that turn. Then draw 
-as many new letters as you played; always keep seven letters on your rack, as 
-long as there are enough tiles left in the bag.
+Complete your turn by counting and announcing your score for that turn. Then
+draw as many new letters as you played; always keep seven letters on your rack, 
+as long as there are enough tiles left in the bag.
 #3
 Play passes to the left. The second player, and then each in turn, adds one or more
 letters to those already played to form new words. All letters played on a turn 
