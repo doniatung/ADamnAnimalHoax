@@ -1,4 +1,4 @@
-
+public class Player{
   String name;
   ArrayList<Tile> hand;
   ArrayList<Tile> current;
@@ -19,5 +19,6 @@ void give(Tile x){
     hand.add(x);
   }
   
-void remove(
+void remove(){
+}
 }

@@ -17,13 +17,13 @@ void instructionsPage(){
   background(255);
   textSize(20);
   textAlign(CENTER);
-  text("Instructions!", width/2 -20 , 30); 
+  text("Instructions!", width/2 -10 , 30); 
   fill(#401F1F);
   textSize(15);
   String[] lines = loadStrings("instructions.txt");
   int y = 50;
   for (int i = 0; i < lines.length; i++){
-        text(lines[i], 300, y);
+        text(lines[i], 325, y);
         fill(#401F1F);
         y += 15;
     }
