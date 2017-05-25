@@ -39,7 +39,6 @@ void startScreen(){
 }
 
 void gameScreen(){
-  //size(800,800);
   initGrid();
   background(255);
   rect(instructionX, instructionY, instructionWidth, instructionHeight, 7);
@@ -48,8 +47,12 @@ void gameScreen(){
   fill(255);
   textSize(10);
   text("Instructions", instructionX + (instructionWidth / 2), instructionY + (instructionHeight/2));
-  //text("Instructions", instructionX, instructionY);
-  //fill(0, 102, 153);
+  rect(optionsX, optionsY, optionsWidth, optionsHeight, 7);
+  fill(0);
+  textAlign(CENTER,CENTER);
+  fill(100);
+  textSize(10);
+  text("Options", optionsX + (optionsWidth / 2), optionsY + (optionsHeight/2));
   for (int x = 0; x < 15; x++){
     for (int y = 0; y < 15; y++){
       board[x][y].display();
@@ -65,7 +68,7 @@ void mousePressed(){
   if (screen == 5 || overInstructions()){
     instructionsPage();
   }
-  if (screen == 5 || overOptions()){
+  if (screen == 6 || overOptions()){
     optionsPage();
   }
   if (screen==0){
