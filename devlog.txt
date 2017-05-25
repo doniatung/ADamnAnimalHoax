@@ -44,7 +44,7 @@ LESSONS LEARNED
 
 2017-05-18
 --------------------------------------------------------------
-All members :: 
+All members :: Proposal!!
 DT :: Created Tile class with accessors and mutators 
 MC :: 
 MT :: 
@@ -55,23 +55,32 @@ MT ::
 All members :: 
 DT :: Created the BoardTile class with accessors and mutators. 
 MC :: 
-MT :: 
+MT :: Started working on Board setup.
+==============================================================
+
+
+2017-05-20
+--------------------------------------------------------------
+All members :: 
+DT :: 
+MC :: 
+MT :: Finished Board setup and opening screen. 
 ==============================================================
 
 2017-05-22
 --------------------------------------------------------------
-All members :: 
+All members :: Worked on the second plan. 
 DT :: Created the Instructions Button and the Instructions Page.
-MC :: Created Player class, and methods.  Unable to push b/c Stuy computers froze 
-MT :: 
+MC :: Created Player class, and methods.  Unable to push b/c Stuy computers froze.
+MT :: Worked on processing. 
 ==============================================================
 
 2017-05-23
 --------------------------------------------------------------
-All members :: 
+All members :: UML and flow chart. 
 DT :: Inputted actual instructions to the Instructions page. 
 MC :: 
-MT :: 
+MT :: Wrote up the UMLs/flow chart. 
 ==============================================================
 
 2017-05-24
@@ -82,15 +91,15 @@ MC ::
 MT :: 
 ==============================================================
 
-2017-01-09
+2017-05-25
 --------------------------------------------------------------
-All members :: 
+All members :: Discussed algo for AI. Started the Node and Tree class to store solutions. 
 DT :: 
 MC :: 
 MT :: 
 ==============================================================
 
-2017-01-09
+2017-05-26
 --------------------------------------------------------------
 All members :: 
 DT :: 
