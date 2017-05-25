@@ -61,23 +61,23 @@ MT ::
 2017-05-22
 --------------------------------------------------------------
 All members :: 
-DT ::
+DT :: Created the Instructions Button and the Instructions Page.
 MC :: Created Player class, and methods.  Unable to push b/c Stuy computers froze 
 MT :: 
 ==============================================================
 
-2017-01-09
+2017-05-23
 --------------------------------------------------------------
 All members :: 
-DT :: 
+DT :: Inputted actual instructions to the Instructions page. 
 MC :: 
 MT :: 
 ==============================================================
 
-2017-01-09
+2017-05-24
 --------------------------------------------------------------
-All members :: 
-DT :: 
+All members :: Researched algorithms for the AI
+DT :: worked on formatting for the instructions. 
 MC :: 
 MT :: 
 ==============================================================
