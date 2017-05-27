@@ -2,18 +2,19 @@ import java.util.ArrayList;
 
 public class Node{
 
-    private char letter;
+    private Character letter;
+    private String value;
     private ArrayList<Node> children;
     private boolean isEnd;
 
     public Node(){
-	letter = '';
 	children = new ArrayList<Node>();
 	isEnd = false;
     }
     
-    public Node (char letter){
+    public Node (char letter, String value){
 	this.letter = letter;
+	this.value = value;
 	children = new ArrayList<Node>();
 	isEnd = false;
     }
@@ -22,9 +23,13 @@ public class Node{
 	isEnd = bool;
     }
 
-    public void addChild(char let){
-	Node lette = new Node(let);
+    public boolean addChild(Character let, String val){
+	Node lette = new Node(let,val);
+        if (children.contains(lette)){
+	    return false;
+	}
 	children.add(lette);
+	return true;
     }
 
     public char getLetter(){
@@ -33,14 +38,42 @@ public class Node{
 
     public Node getChild(char let){
 	for (int x = 0; x<children.size(); x++){
-	    if (let.equals(children.get(x).getLetter())){
+	    if (let == (children.get(x).getLetter())){
 		return children.get(x);
 	    }
 	}
 	return null;
     }
 
-    public boolean getIsEnd(){
+    public boolean equals(Node node, char[] allLetters){
+	boolean equal = true;
+	if (value.equals(node.value) && (isWord() == node.isWord())){
+	    for (int x = 0; x < allLetters.length; x++){
+		if (getChild(allLetters[x]) != node.getChild(allLetters[x])){
+		    equal = false;
+		}
+	    }
+	    if (equal){
+		return true;
+	    }
+	    return false;
+	}
+	return false;
+    }
+
+    public boolean isWord(){
 	return isEnd;
+    }
+
+    public void setIsWord(boolean bool){
+	isEnd = bool;
+    }
+
+    public String toString(){
+	return value;
+    }
+
+    public ArrayList<Node> getChildren(){
+	return children;
     }
 }
