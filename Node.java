@@ -36,6 +36,10 @@ public class Node{
 	return letter;
     }
 
+    public String getValue(){
+	return value;
+    }
+    
     public Node getChild(char let){
 	for (int x = 0; x<children.size(); x++){
 	    if (let == (children.get(x).getLetter())){
@@ -45,6 +49,10 @@ public class Node{
 	return null;
     }
 
+    public boolean containsChild(char let){
+	return (!(getChild(let) == null));
+    }
+    
     public boolean equals(Node node, char[] allLetters){
 	boolean equal = true;
 	if (value.equals(node.value) && (isWord() == node.isWord())){
