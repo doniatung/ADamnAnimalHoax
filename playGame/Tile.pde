@@ -1,8 +1,8 @@
 public class Tile{
 
-    private String letter;
-    private int pointVal;
-    private boolean endOfWord;
+String letter;
+int pointVal;
+boolean endOfWord;
 
     public Tile(String letter){
   //set the Tile's letter to the inputted value
@@ -50,6 +50,15 @@ public class Tile{
   
     //changes the value of endOfWord to reflect whether or not it can be the end of a wor
     public void setEnd(boolean bool){
-  endOfWord = bool;
+     endOfWord = bool;
     }
+    
+  void display(int x, int y){
+   rect (x, y, 50, 50);
+   fill(0);
+   textAlign(CENTER,CENTER);
+  fill(100);
+  textSize(10);
+   text(getLetter(), x, y);
+}
 }

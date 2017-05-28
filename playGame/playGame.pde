@@ -1,6 +1,8 @@
 int screen = 0;
 PImage img;
 BoardTile[][] board = new BoardTile[15][15];
+Player player = new Player();
+
 
 void setup(){
   size(650,650);
@@ -42,15 +44,14 @@ void gameScreen(){
   initGrid();
   background(255);
   rect(instructionX, instructionY, instructionWidth, instructionHeight, 7);
-  fill(255);
-  textAlign(CENTER,CENTER);
-  fill(255);
-  textSize(10);
-  text("Instructions", instructionX + (instructionWidth / 2), instructionY + (instructionHeight/2));
-  rect(optionsX, optionsY, optionsWidth, optionsHeight, 7);
-  fill(0);
   textAlign(CENTER,CENTER);
   fill(100);
+  textSize(10);
+  text("Instructions", instructionX + (instructionWidth / 2), instructionY + (instructionHeight/2));
+  fill(0);
+  rect(optionsX, optionsY, optionsWidth, optionsHeight, 7);
+  textAlign(CENTER,CENTER);
+  fill(255);
   textSize(10);
   text("Options", optionsX + (optionsWidth / 2), optionsY + (optionsHeight/2));
   for (int x = 0; x < 15; x++){
@@ -58,7 +59,21 @@ void gameScreen(){
       board[x][y].display();
     }
   }
+  rect(100, height - 100, 400, 75);
+  player.setUp();
+  int x = 135;
+  for (int i = 0; i < player.getHand().size(); i ++){
+    int y = height - 70;
+    Tile a = player.hand.get(i);
+    textAlign(CENTER,CENTER);
+    fill(255);
+    textSize(55);
+    text(a.getLetter(), x, y);
+    x += 55;
+  }
 }
+  
+
 
 void gameOverScreen(){
 }
