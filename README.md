@@ -4,7 +4,7 @@
 <ul><li>Max Chan</li>
 <li>Manahal Tabassum</li>
 <li>Donia Tung</li>
-</ul><br>
+</ul>
 
 <h3>Launch Instructions</h3>
 <t>To start, clone this repo into a new directory. Open this directory, then open /playGame/playGame.pde with Processing.  Hit the 'play' button to get started<br>
