@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.io.*;
 
 public class Trie{
@@ -94,6 +95,49 @@ public class Trie{
 	return current;
     }
 
+    public String toString(){
+	return root.toString();
+    }
+
+    public int sizeOf(){
+	return sizeOf(alphabet, root);
+    }
+
+    public int sizeOf(char[] alphabet, Node start){
+	int size = 0;
+	for (int x = 0; x < alphabet.length; x++){
+	    if (start.containsChild(alphabet[x])){
+		size += sizeOf(alphabet, start.getChild(alphabet[x]));
+		size++;
+	    }
+	}
+	return size;
+    }
+    
     public static void main (String args[]){
+        File newFile;
+	String word;
+	Scanner scan;
+	Trie mytree = new Trie();
+	int totalWords = 0;
+	ArrayList<String> dict = new ArrayList<String>();
+	try{
+	    newFile = new File("20k.txt");
+	    scan = new Scanner(newFile);
+
+	    while (scan.hasNext()){
+		word = scan.nextLine();
+		System.out.println("Word added to tree: " + word);
+		mytree.addWord(word);
+		totalWords++;
+	    }
+	}
+	catch (FileNotFoundException e){
+	    System.out.println("File Not Found.");
+	    System.exit(1);
+	}
+
+	System.out.println("Total words entered: " + totalWords);
+	System.out.println("Total Nodes in Trie: " + mytree.sizeOf());
     }
 }
