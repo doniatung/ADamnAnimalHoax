@@ -27,4 +27,10 @@ void instructionsPage(){
         fill(#401F1F);
         y += 15;
     }
+  rect(50, 50, optionsWidth, optionsHeight, 7);
+  fill(0);
+  textAlign(CENTER,CENTER);
+  fill(100);
+  textSize(10);
+  text("Go Back", optionsWidth, optionsHeight);
   }
