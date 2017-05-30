@@ -21,13 +21,17 @@ public class Player{
     void give(Tile x){
   hand.add(x);
     }
+    
+    void addCurrent(Tile x){
+      current.add(x);
+    }
   
   //returns player's hand
-    ArrayList getHand(){
+    ArrayList<Tile> getHand(){
   return hand;
     }
   
-    //removes tiles from player's hand, bassed on 'current' 
+    //removes tiles from player's hand, based on 'current' 
     void remove(){
       for (int x = 0; x < hand.size(); x++){
         for (int y = 0; y < current.size(); y++){

@@ -96,6 +96,21 @@ void mousePressed(){
   if (screen==0){
     startGame();
   }
+  if (over1()){
+  }
+  if (over2()){
+  }
+  if (over3()){
+  }
+  if (over4()){
+  }
+  if (over5()){
+  }
+  if (over6()){
+  }
+  if (over7()){
+  }
+  
 }
 //starts game by changing screen value
 void startGame(){

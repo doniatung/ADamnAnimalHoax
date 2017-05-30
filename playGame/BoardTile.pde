@@ -31,6 +31,14 @@ public class BoardTile {
   public void full() {
     filled = true;
   }
+  
+  int getX(){
+    return xpos;
+  }
+  
+  int getY(){
+    return ypos;
+  }
 
   //sets the tile letter
   public void setLetter(Tile x) {
@@ -51,6 +59,8 @@ public class BoardTile {
   public String getLetter() {
     return letter;
   }
+  
+   
 
   //displays the tile
   void display() {
