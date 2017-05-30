@@ -1,3 +1,4 @@
+//sets up grid for the game
 void initGrid() {
   for (int i = 0; i < 15; i++) {
     for (int j = 0; j < 15; j++) {
@@ -43,6 +44,7 @@ void initGrid() {
         board[i][j] = new BoardTile("pink", 10+i*35, 10+j*35);
       } 
       else {
+        //no bonus tiles
         board[i][j] = new BoardTile("normal", 10+i*35, 10+j*35);
       }
     }

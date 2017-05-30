@@ -3,13 +3,13 @@ PImage img;
 BoardTile[][] board = new BoardTile[15][15];
 Player player = new Player();
 
-
+//sets up the game with board, loads startScreen
 void setup(){
   size(650,650);
   img = loadImage("startScreen.png");
   initGrid();
 }
-
+//Runs the game, is used to update game
 void draw(){
   if (screen == 0){
     startScreen();
@@ -31,6 +31,8 @@ void draw(){
   }
 }
 
+
+//displays start screen
 void startScreen(){
   background(255);
   rect(instructionX, instructionY, instructionWidth, instructionHeight, 7);
@@ -40,6 +42,7 @@ void startScreen(){
   image(img,0,0);
 }
 
+//displays game screen
 void gameScreen(){
   initGrid();
   background(255);
@@ -74,23 +77,27 @@ void gameScreen(){
 }
   
 
-
+//displays game over screen
 void gameOverScreen(){
 }
 
-
+//instructions for mouse being pressed
 void mousePressed(){
+  //user calls for instructions page
   if (screen == 5 || overInstructions()){
+    //opens instructions page
     instructionsPage();
   }
+  //user calls for options page
   if (screen == 6 || overOptions()){
+    //opens options page
     optionsPage();
   }
   if (screen==0){
     startGame();
   }
 }
-
+//starts game by changing screen value
 void startGame(){
   screen = 1;
 }
