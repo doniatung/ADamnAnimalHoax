@@ -4,21 +4,26 @@ import java.io.*;
 
 public class Trie{
 
-    private Node root = new Node('\0', "");
+    private Node root = new Node('\0', ""); //gives root node default value
     public final char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
                                 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
                                 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
-                                'y', 'z'};
+				    'y', 'z'}; //array with alphabet
 
+    //default contructor
     public Trie(){
     }
 
+    //overloaded constructor
+    //pre cond: ArrayList containing words size > 0
+    //post cond: adds all words to Trie
     public Trie(ArrayList<String> words){
 	for (String word : words){
 	    addWord(word);
 	}
     }
 
+    //adds a word to Trie by converting word to char array
     public void addWord(String word){
 	char[] letters = new char[word.length()];
 	for (int x = 0; x < word.length(); x++){
@@ -26,21 +31,23 @@ public class Trie{
 	}
 	addWord(letters);
     }
-
+    
+    //adds Word by adding Nodes of each char value
     public void addWord(char[] letters){
 	Node current = root;
 
 	for (int x = 0; x < letters.length; x++){
-	    if (!current.containsChild(letters[x])){
+	    if (!current.containsChild(letters[x])){ //does Node contain child already
 		current.addChild(letters[x], current.getValue() + letters[x]);
 	    }
 
-	    current = current.getChild(letters[x]);
+	    current = current.getChild(letters[x]); //move current pointer
 	}
 
-	current.setIsWord(true);
+	current.setIsWord(true); //once word is added set isWord to true
     }
 
+    //checks to see if the trie branch contains a prefix
     public boolean containsPrefix(String prefix){
 	char[] prefixLetters = new char[prefix.length()];
 	for (int x = 0; x < prefix.length(); x++){
@@ -48,7 +55,8 @@ public class Trie{
 	}
 	return contains(prefixLetters, false);
     }
-
+    
+    //checks if Trie contains a Word
     public boolean containsWord(String word){
 	char[] letters = new char[word.length()];
 	for (int x = 0; x < word.length(); x++){
@@ -57,6 +65,7 @@ public class Trie{
 	return contains(letters, true);
     }
 
+    //returns Node containing value = word
     public Node getWord(String word){
 	char[] letters = new char[word.length()];
 	for (int x = 0; x < word.length(); x++){
@@ -68,7 +77,8 @@ public class Trie{
 	}
 	return null;
     }
-
+    
+    //returns Node containing the prefix
     public Node getPrefix(String prefix){
 	char[] letters = new char[prefix.length()];
 	for (int x = 0; x < prefix.length(); x++){
@@ -77,12 +87,14 @@ public class Trie{
 	return getNode(letters);
     }
 
+    //checks if word is contained in Trie
     private boolean contains(char[] word, boolean isWord){
 	Node node = getNode(word);
 	return (node != null && node.isWord() && isWord) ||
 	    (!isWord && node != null);
     }
 
+    //returns end node of Trie containing word
     private Node getNode(char[] word){
 	Node current = root;
 
@@ -95,14 +107,17 @@ public class Trie{
 	return current;
     }
 
+    //overridden toString()
     public String toString(){
 	return root.toString();
     }
 
+    //returns the number of Nodes in the tree
     public int sizeOf(){
 	return sizeOf(alphabet, root);
     }
 
+    //returns the number of Nodes in the tree by traversing through all branches
     public int sizeOf(char[] alphabet, Node start){
 	int size = 0;
 	for (int x = 0; x < alphabet.length; x++){
