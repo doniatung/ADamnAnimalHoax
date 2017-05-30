@@ -4,15 +4,18 @@ int instructionX = 625 - instructionWidth - 10;
 int instructionY = height - instructionHeight - 10;
 
 boolean overInstructions()  {
+  //if the mouse has clicked instructions button
   if (mouseX >= instructionX  && mouseX <= instructionX + instructionWidth && 
       mouseY >= instructionY && mouseY <= instructionY + instructionHeight) {
-    screen = 5;
+      //screen = 5 moves to instructions page
+        screen = 5;
     return true;
   } else {
     return false;
   }
 }
 
+//sets up instructions page
 void instructionsPage(){
   background(255);
   textSize(20);
