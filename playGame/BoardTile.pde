@@ -78,5 +78,10 @@ public class BoardTile {
       fill(DEFAULT);
     }
     rect (xpos, ypos, 30, 30);
+    if (letter != null){
+      fill(0);
+      textSize(35);
+      text(letter, boardX(), boardY());
+    }
   }
 }

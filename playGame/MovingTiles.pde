@@ -1,6 +1,6 @@
 int boardX(){
   for (int i = 0; i < 15; i ++){
-    if (mouseX >= board[0][i].getX() && mouseX <=  board[0][i].getX() + 30){
+    if (mouseX >= board[i][0].getX() && mouseX <=  board[i][0].getX() + 30){
       return i;
     }
   }
@@ -9,7 +9,7 @@ int boardX(){
 
 int boardY(){
   for (int i = 0; i < 15; i ++){
-    if (mouseY >= board[i][0].getY() && mouseY <=  board[i][0].getY() + 30){
+    if (mouseY >= board[0][i].getY() && mouseY <=  board[0][i].getY() + 30){
       return i;
     }
   }
@@ -19,7 +19,7 @@ int boardY(){
 
 boolean over1()  {
   //if the mouse has clicked instructions button
-  if (mouseX >= 135  && mouseX <= 135 + 55 && 
+  if (mouseX >= 120  && mouseX <= 120 + 55 && 
       mouseY >= height - 100 && mouseY <= height) {
     player.addCurrent(player.getHand().get(0));
     return true;
@@ -30,7 +30,7 @@ boolean over1()  {
 
 boolean over2()  {
   //if the mouse has clicked instructions button
-  if (mouseX >= 190  && mouseX <= 190 + 55 && 
+  if (mouseX >= 155  && mouseX <= 155 + 55 && 
       mouseY >= height - 100 && mouseY <= height) {
         player.addCurrent(player.getHand().get(1));
         return true;
@@ -41,7 +41,7 @@ boolean over2()  {
 
 boolean over3()  {
   //if the mouse has clicked instructions button
-  if (mouseX >= 245  && mouseX <= 245 + 55 && 
+  if (mouseX >= 210  && mouseX <= 210 + 55 && 
       mouseY >= height - 100 && mouseY <= height) {
         player.addCurrent(player.getHand().get(2));
     return true;
@@ -52,7 +52,7 @@ boolean over3()  {
 
 boolean over4()  {
   //if the mouse has clicked instructions button
-  if (mouseX >= 300  && mouseX <= 300 + 55 && 
+  if (mouseX >= 265  && mouseX <= 265 + 55 && 
       mouseY >= height - 100 && mouseY <= height) {
         player.addCurrent(player.getHand().get(3));
     return true;
@@ -63,7 +63,7 @@ boolean over4()  {
 
 boolean over5()  {
   //if the mouse has clicked instructions button
-  if (mouseX >= 355  && mouseX <= 355 + 55 && 
+  if (mouseX >= 320  && mouseX <= 320 + 55 && 
       mouseY >= height - 100 && mouseY <= height) {
         player.addCurrent(player.getHand().get(4));
     return true;
@@ -74,7 +74,7 @@ boolean over5()  {
 
 boolean over6()  {
   //if the mouse has clicked instructions button
-  if (mouseX >= 410  && mouseX <= 410 + 55 && 
+  if (mouseX >= 375  && mouseX <= 375 + 55 && 
       mouseY >= height - 100 && mouseY <= height) {
         player.addCurrent(player.getHand().get(5));
     return true;
@@ -85,7 +85,7 @@ boolean over6()  {
 
 boolean over7()  {
   //if the mouse has clicked instructions button
-  if (mouseX >= 465  && mouseX <= 465 + 55 && 
+  if (mouseX >= 430  && mouseX <= 430 + 55 && 
       mouseY >= height - 100 && mouseY <= height) {
         player.addCurrent(player.getHand().get(6));
     return true;

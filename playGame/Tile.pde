@@ -4,6 +4,9 @@ String letter;
 int pointVal;
 boolean endOfWord;
 
+public Tile (){
+}
+
     public Tile(String letter){
   //set the Tile's letter to the inputted value
   this.letter = letter;
@@ -34,31 +37,32 @@ boolean endOfWord;
     }
 
     //get letter on the Tile
-    public String getLetter(){
+  String getLetter(){
   return letter;
     }
 
     //get the point value of the Tile 
-    public int getValue(){
+   int getValue(){
   return pointVal;
     }
 
     //return if this letter could be the end of a potential word
-    public boolean isThisTheEnd(){
+boolean isThisTheEnd(){
   return endOfWord;
     }
   
     //changes the value of endOfWord to reflect whether or not it can be the end of a wor
-    public void setEnd(boolean bool){
+void setEnd(boolean bool){
      endOfWord = bool;
     }
     
+ 
   void display(int x, int y){
    rect (x, y, 50, 50);
    fill(0);
    textAlign(CENTER,CENTER);
-  fill(100);
-  textSize(10);
-   text(getLetter(), x, y);
-}
+   fill(100);
+   textSize(10);
+   text(letter, x, y);
+  }
 }

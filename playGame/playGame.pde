@@ -35,10 +35,6 @@ void draw(){
 //displays start screen
 void startScreen(){
   background(255);
-  rect(instructionX, instructionY, instructionWidth, instructionHeight, 7);
-  fill(255);
-  textSize(5);
-  text("Instructions", instructionX, instructionY);
   image(img,0,0);
 }
 
@@ -96,22 +92,42 @@ void mousePressed(){
   if (screen==0){
     startGame();
   }
-  if (over1()){
+  if (screen == 1){
+    
+    int xcor = boardX();
+    int ycor = boardY();
+    Tile adding = new Tile();
+    if (over1()){
+      adding = player.getHand().get(0);
+    }
+    if (over2()){
+      adding = player.getHand().get(1);
+    }
+    if (over3()){
+      adding = player.getHand().get(2);
+    }
+    if (over4()){
+      adding = player.getHand().get(3);
+    }
+    if (over5()){
+      adding = player.getHand().get(4);
+    }
+    if (over6()){
+      adding = player.getHand().get(5);
+    }
+    if (over7()){
+      adding = player.getHand().get(6);
+    }   
+    System.out.println(adding.getLetter());
+    if (xcor != -1 && ycor != -1){
+      System.out.println(adding.getLetter());
+      System.out.println(xcor);
+      System.out.println(ycor);
+       board[xcor] [ycor].setLetter(adding);
+    }
   }
-  if (over2()){
-  }
-  if (over3()){
-  }
-  if (over4()){
-  }
-  if (over5()){
-  }
-  if (over6()){
-  }
-  if (over7()){
-  }
-  
 }
+  
 //starts game by changing screen value
 void startGame(){
   screen = 1;
