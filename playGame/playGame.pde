@@ -2,6 +2,7 @@ int screen = 0;
 PImage img;
 BoardTile[][] board = new BoardTile[15][15];
 Player player = new Player();
+Tile adding = new Tile();
 
 //sets up the game with board, loads startScreen
 void setup(){
@@ -17,6 +18,7 @@ void draw(){
   else if (screen == 1){
     gameScreen();
   }
+  
   else if (screen == 2){
     gameOverScreen();
   }
@@ -42,6 +44,7 @@ void startScreen(){
 void gameScreen(){
   initGrid();
   background(255);
+  fill(255);
   rect(instructionX, instructionY, instructionWidth, instructionHeight, 7);
   textAlign(CENTER,CENTER);
   fill(100);
@@ -96,7 +99,6 @@ void mousePressed(){
     
     int xcor = boardX();
     int ycor = boardY();
-    Tile adding = new Tile();
     if (over1()){
       adding = player.getHand().get(0);
     }
@@ -118,12 +120,14 @@ void mousePressed(){
     if (over7()){
       adding = player.getHand().get(6);
     }   
-    System.out.println(adding.getLetter());
     if (xcor != -1 && ycor != -1){
-      System.out.println(adding.getLetter());
       System.out.println(xcor);
       System.out.println(ycor);
-       board[xcor] [ycor].setLetter(adding);
+      board[xcor] [ycor].setLetter(adding);
+      board[xcor][ycor].full();
+      System.out.println(board[xcor][ycor].getLetter());
+      board[xcor][ycor].display();
+      //redraw();
     }
   }
 }
