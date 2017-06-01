@@ -44,7 +44,7 @@ void startScreen(){
 
 //displays game screen
 void gameScreen(){
-  initGrid();
+  //initGrid();
   background(numBackground); //background(255);
   fill(255);
   rect(instructionX, instructionY, instructionWidth, instructionHeight, 7);

@@ -3,11 +3,12 @@ public class Tile{
 String letter;
 int pointVal;
 boolean endOfWord;
+boolean drag = false;
 
 public Tile (){
 }
 
-    public Tile(String letter){
+  public Tile(String letter){
   //set the Tile's letter to the inputted value
   this.letter = letter;
   //endOfWord is false until the AI algo considers it
@@ -38,7 +39,7 @@ public Tile (){
 
     //get letter on the Tile
   String getLetter(){
-  return letter;
+    return letter;
     }
 
     //get the point value of the Tile 
