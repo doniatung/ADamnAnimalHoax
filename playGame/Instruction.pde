@@ -15,6 +15,16 @@ boolean overInstructions()  {
   }
 }
 
+void initInstructButton(){
+  background(numBackground);
+  fill(255);
+  rect(instructionX, instructionY, instructionWidth, instructionHeight, 7);
+  textAlign(CENTER,CENTER);
+  fill(100);
+  textSize(10);
+  text("Instructions", instructionX + (instructionWidth / 2), instructionY + (instructionHeight/2));
+}
+
 //sets up instructions page
 void instructionsPage(){
   background(255);

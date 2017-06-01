@@ -46,12 +46,7 @@ void startScreen(){
 void gameScreen(){
   //initGrid();
   background(numBackground); //background(255);
-  fill(255);
-  rect(instructionX, instructionY, instructionWidth, instructionHeight, 7);
-  textAlign(CENTER,CENTER);
-  fill(100);
-  textSize(10);
-  text("Instructions", instructionX + (instructionWidth / 2), instructionY + (instructionHeight/2));
+  initInstructButton();
   fill(0);
   rect(optionsX, optionsY, optionsWidth, optionsHeight, 7);
   textAlign(CENTER,CENTER);
@@ -85,7 +80,7 @@ void gameOverScreen(){
 //instructions for mouse being pressed
 void mousePressed(){
   //user calls for instructions page
-  if (screen == 5 || overInstructions()){
+  if (screen == 1 && overInstructions()){
     //opens instructions page
     instructionsPage();
   }
