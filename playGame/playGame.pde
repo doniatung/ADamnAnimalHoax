@@ -65,15 +65,16 @@ void gameScreen(){
     int y = height - 70;
     Tile a = player.hand.get(i);
     textAlign(CENTER,CENTER);
-    fill(255);
+    fill(a.fill);
     textSize(55);
     text(a.getLetter(), x, y);
     x += 55;
+    
   }
 }
   
 
-//displays game over screen
+//s game over screen
 void gameOverScreen(){
 }
 
@@ -118,13 +119,18 @@ void mousePressed(){
       adding = player.getHand().get(6);
     }   
     if (xcor != -1 && ycor != -1){
-      //System.out.println(xcor);
-      //System.out.println(ycor);
-      board[xcor] [ycor].setLetter(adding);
-      board[xcor][ycor].full();
-      System.out.println(board[xcor][ycor].getLetter());
-      board[xcor][ycor].draw();
-      redraw();
+      if (adding != null){
+        //System.out.println(xcor);
+        //System.out.println(ycor);
+        board[xcor] [ycor].setLetter(adding);
+        player.addCurrent(adding);
+        board[xcor][ycor].full();
+        System.out.println(board[xcor][ycor].getLetter());
+        board[xcor][ycor].display();
+        adding.fill = 100;
+        adding = null;
+        redraw();
+      }
     }
   }
 }
