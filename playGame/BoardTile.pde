@@ -43,7 +43,11 @@ public class BoardTile {
 
   //sets the tile letter
   public void setLetter(Tile x) {
+    if (x == null){
+    }
+    else{
     letter = x.getLetter();
+    }
   }
 
   //returns multiplier of boardTile
@@ -80,7 +84,7 @@ public class BoardTile {
     if (letter != null){
       fill(0);
       textSize(25);
-      text(letter, xpos + 10, ypos + 10);
+      text(letter, xpos + 15, ypos + 12);
     }
   }
   

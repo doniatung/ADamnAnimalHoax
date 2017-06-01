@@ -4,6 +4,7 @@ String letter;
 int pointVal;
 boolean endOfWord;
 boolean drag = false;
+int fill = 255;
 
 public Tile (){
 }
@@ -60,7 +61,7 @@ void setEnd(boolean bool){
  
   void display(int x, int y){
    rect (x, y, 50, 50);
-   fill(0);
+   fill(fill);
    textAlign(CENTER,CENTER);
    fill(100);
    textSize(10);
