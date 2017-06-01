@@ -36,4 +36,5 @@ void instructionsPage(){
   fill(100);
   textSize(10);
   text("Go Back", optionsWidth, optionsHeight);
+  
   }

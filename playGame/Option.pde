@@ -21,7 +21,25 @@ void optionsPage(){
   background(255);
   textSize(20);
   textAlign(CENTER);
-  text("Settings", width/2 -10 , 30); 
   fill(#401F1F);
+  text("Settings", width/2 -10 , 30); 
   textSize(15);
+  
+  
+  
+  textSize(20);
+  textAlign(CENTER);
+  text("Select a Background Color", width/2 -10, 100);
+  //fill(#401F1F);
+  
+  fill(223, 255, 223);
+  rect(width/2 -45, 135, 90, 50, 7);
+  fill(255, 200, 255);
+  rect(width/2 + 65, 135, 90, 50, 7);
+  fill(230, 230, 255);
+  rect(width/2 -155, 135, 90, 50, 7);
+  fill(255,255,255);
+  rect(width/2 -265, 135, 90, 50, 7);
+  fill(255, 213, 213);
+  rect(width/2 + 175, 135, 90, 50, 7);
   }

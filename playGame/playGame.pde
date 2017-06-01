@@ -3,6 +3,7 @@ PImage img;
 BoardTile[][] board = new BoardTile[15][15];
 Player player = new Player();
 Tile adding = new Tile();
+int numBackground = 255;
 
 //sets up the game with board, loads startScreen
 void setup(){
@@ -12,6 +13,7 @@ void setup(){
 }
 //Runs the game, is used to update game
 void draw(){
+ 
   if (screen == 0){
     startScreen();
   }
@@ -36,14 +38,14 @@ void draw(){
 
 //displays start screen
 void startScreen(){
-  background(255);
+  background(numBackground); //background(255);
   image(img,0,0);
 }
 
 //displays game screen
 void gameScreen(){
   initGrid();
-  background(255);
+  background(numBackground); //background(255);
   fill(255);
   rect(instructionX, instructionY, instructionWidth, instructionHeight, 7);
   textAlign(CENTER,CENTER);
