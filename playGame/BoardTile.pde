@@ -61,28 +61,30 @@ public class BoardTile {
     return letter;
   }
   
-   
-
   //displays the tile
   void display() {
     stroke(0);
+    //color
+    if (type.equals("red")) {
+      fill(227,55,58, 150);
+    } else if (type.equals("darkBlue")) {
+      fill(45, 97, 224, 150);
+    } else if (type.equals("lightBlue")) {
+      fill(174, 228, 242, 150);
+    } else if (type.equals("pink")) {
+      fill(245, 101, 171, 150);
+    } else {
+      fill(242, 197, 174, 150);
+    }
+    rect (xpos, ypos, 30, 30);
     if (letter != null){
       fill(0);
       textSize(25);
       text(letter, xpos + 10, ypos + 10);
     }
-    //color
-    if (type.equals("red")) {
-      fill(227,55,58, 255);
-    } else if (type.equals("darkBlue")) {
-      fill(45, 97, 224, 255);
-    } else if (type.equals("lightBlue")) {
-      fill(174, 228, 242, 255);
-    } else if (type.equals("pink")) {
-      fill(245, 101, 171, 255);
-    } else {
-      fill(242, 197, 174, 255);
-    }
-    rect (xpos, ypos, 30, 30);
+  }
+  
+  void draw(){
+    display();
   }
 }

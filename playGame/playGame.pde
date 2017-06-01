@@ -121,17 +121,19 @@ void mousePressed(){
       adding = player.getHand().get(6);
     }   
     if (xcor != -1 && ycor != -1){
-      System.out.println(xcor);
-      System.out.println(ycor);
+      //System.out.println(xcor);
+      //System.out.println(ycor);
       board[xcor] [ycor].setLetter(adding);
       board[xcor][ycor].full();
       System.out.println(board[xcor][ycor].getLetter());
-      board[xcor][ycor].display();
-      //redraw();
+      board[xcor][ycor].draw();
+      redraw();
     }
   }
 }
   
+
+
 //starts game by changing screen value
 void startGame(){
   screen = 1;
