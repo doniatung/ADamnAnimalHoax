@@ -44,7 +44,7 @@ boolean valid(int x1, int x2, int y1, int yx){
   String word = null;
   if (x1 = x2){
     for (int z = min(y1, y2); z <= max(y1, y2); z++){
-       word += board[x1][z] 
+       word += board[x1][z];
     }
   }
   
