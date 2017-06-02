@@ -50,7 +50,7 @@ boolean valid(int x1, int x2, int y1, int yx){
   
   if (y1 = y2){
     for (int z = min(x1, x2); z <= max(x1, x2); z++){
-       word += board[z][y1]
+       word += board[z][y1];
     }
   }
   
