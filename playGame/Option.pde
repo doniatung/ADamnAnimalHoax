@@ -17,6 +17,7 @@ boolean overOptions()  {
 }
 
 void initOptions(){
+  pushStyle();
   fill(0);
   rect(optionsX, optionsY, optionsWidth, optionsHeight, 7);
   textAlign(CENTER,CENTER);

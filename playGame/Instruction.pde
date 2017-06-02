@@ -16,7 +16,7 @@ boolean overInstructions()  {
 }
 
 void initInstructButton(){
-  background(numBackground);
+  pushStyle();
   fill(255);
   rect(instructionX, instructionY, instructionWidth, instructionHeight, 7);
   textAlign(CENTER,CENTER);
