@@ -1,15 +1,20 @@
 boolean active = false;
-okXcor = 635-60;
-okYCor = height - 70;
-final color activeButton = ( );
-final color inactiveButton = ( );
+int okXcor = 545;
+int okYcor = height + 350;
+final color activeButton = color(#03C6FF);
+final color inactiveButton = color(#C5ECF7);
 
 
-void draw(){
-  fill(#00BFF7);
-  rect(optionsX, optionsY, optionsWidth, optionsHeight, 7);
-  textAlign(CENTER,CENTER);
+void initOkButton() {
+  pushStyle();
+  fill(inactiveButton);
+  stroke(activeButton);
+  if (active)
+    strokeWeight(2);
+  else noStroke();
+  rect(okXcor, okYcor, optionsWidth, optionsHeight, 7);
+  textAlign(CENTER, CENTER);
   fill(255);
   textSize(10);
-  text("Options", optionsX + (optionsWidth / 2), optionsY + (optionsHeight/2));
+  text("OK", okXcor + (optionsWidth / 2), okYcor + (optionsHeight/2));
 }

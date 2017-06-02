@@ -48,6 +48,7 @@ void gameScreen(){
   background(numBackground); //background(255);
   initInstructButton();
   initOptions();
+  initOkButton();
   for (int x = 0; x < 15; x++){
     for (int y = 0; y < 15; y++){
       board[x][y].display();
@@ -63,13 +64,12 @@ void gameScreen(){
     fill(a.fill);
     textSize(55);
     text(a.getLetter(), x, y);
-    x += 55;
-    
+    x += 55;  
   }
 }
   
 
-//s game over screen
+//a game over screen
 void gameOverScreen(){
 }
 
