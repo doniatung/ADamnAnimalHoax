@@ -80,6 +80,9 @@ void mousePressed(){
     //opens instructions page
     instructionsPage();
   }
+  if (screen == 1 && overOK()){
+    ok();
+  }
   //user calls for options page
   if (screen == 6 || overOptions()){
     //opens options page

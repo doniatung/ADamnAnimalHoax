@@ -18,3 +18,15 @@ void initOkButton() {
   textSize(10);
   text("OK", okXcor + (optionsWidth / 2), okYcor + (optionsHeight/2));
 }
+
+boolean overOK()  {
+  //if the mouse has clicked instructions button
+  if (mouseX >= okXcor  && mouseX <= okXcor + instructionWidth && 
+      mouseY >= okYcor && mouseY <= okYcor + instructionHeight) {
+      //screen = 5 moves to instructions page
+        ok();
+    return true;
+  } else {
+    return false;
+  }
+}
