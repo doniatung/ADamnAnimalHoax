@@ -47,12 +47,7 @@ void gameScreen(){
   //initGrid();
   background(numBackground); //background(255);
   initInstructButton();
-  fill(0);
-  rect(optionsX, optionsY, optionsWidth, optionsHeight, 7);
-  textAlign(CENTER,CENTER);
-  fill(255);
-  textSize(10);
-  text("Options", optionsX + (optionsWidth / 2), optionsY + (optionsHeight/2));
+  initOptions();
   for (int x = 0; x < 15; x++){
     for (int y = 0; y < 15; y++){
       board[x][y].display();

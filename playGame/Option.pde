@@ -16,6 +16,15 @@ boolean overOptions()  {
   }
 }
 
+void initOptions(){
+  fill(0);
+  rect(optionsX, optionsY, optionsWidth, optionsHeight, 7);
+  textAlign(CENTER,CENTER);
+  fill(255);
+  textSize(10);
+  text("Options", optionsX + (optionsWidth / 2), optionsY + (optionsHeight/2));
+}
+
 //sets up options page
 void optionsPage(){
   background(255);
