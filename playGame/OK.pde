@@ -57,6 +57,10 @@ boolean valid(int x1, int x2, int y1, int yx){
   return containsWord(word);
 }
 
+boolean containsWord(String word){
+  return dictionary.containsWord(word);
+}
+
 boolean overOK()  {
   //if the mouse has clicked instructions button
   if (mouseX >= okXcor  && mouseX <= okXcor + instructionWidth && 
