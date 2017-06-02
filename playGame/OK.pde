@@ -16,7 +16,7 @@ void initOkButton() {
   textAlign(CENTER, CENTER);
   fill(255);
   textSize(10);
-<<<<<<< HEAD
+//<<<<<<< HEAD
   text("Options", optionsX + (optionsWidth / 2), optionsY + (optionsHeight/2));
 }
 
@@ -44,17 +44,18 @@ boolean valid(int x1, int x2, int y1, int yx){
   String word = null;
   if (x1 = x2){
     for (int z = min(y1, y2); z <= max(y1, y2); z++){
-       word += board[x1][z] 
+       word += board[x1][z];
     }
   }
   
   if (y1 = y2){
     for (int z = min(x1, x2); z <= max(x1, x2); z++){
-       word += board[z][y1]
+       word += board[z][y1];
     }
   }
   
   return containsWord(word);
+}
 =======
   text("OK", okXcor + (optionsWidth / 2), okYcor + (optionsHeight/2));
 <<<<<<< HEAD
