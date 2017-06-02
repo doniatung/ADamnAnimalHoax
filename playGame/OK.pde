@@ -56,10 +56,6 @@ boolean valid(int x1, int x2, int y1, int yx){
   
   return containsWord(word);
 }
-=======
-  text("OK", okXcor + (optionsWidth / 2), okYcor + (optionsHeight/2));
-<<<<<<< HEAD
-}
 
 boolean overOK()  {
   //if the mouse has clicked instructions button
@@ -71,7 +67,7 @@ boolean overOK()  {
   } else {
     return false;
   }
-=======
->>>>>>> c070daa6653553462c58a55dea95d873ed95bf20
->>>>>>> 185ffe209857773332484c1803bbfbeb8582f4d4
+}
+
+void ok(){
 }

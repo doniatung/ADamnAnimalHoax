@@ -6,11 +6,12 @@ int instructionY = height - instructionHeight - 10;
 boolean overInstructions()  {
   //if the mouse has clicked instructions button
   if (mouseX >= instructionX  && mouseX <= instructionX + instructionWidth && 
-      mouseY >= instructionY && mouseY <= instructionY + instructionHeight {
+      mouseY >= instructionY && mouseY <= (instructionY + instructionHeight)) {
       //screen = 5 moves to instructions page
         screen = 5;
     return true;
-  } else {
+      }
+  else {
     return false;
   }
 }

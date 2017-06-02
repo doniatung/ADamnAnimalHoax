@@ -4,12 +4,14 @@ BoardTile[][] board = new BoardTile[15][15];
 Player player = new Player();
 Tile adding = new Tile();
 int numBackground = 255;
+Trie dictionary;
 
 //sets up the game with board, loads startScreen
 void setup(){
   size(650,650);
   img = loadImage("startScreen.png");
   initGrid();
+  dictionary = createDictionary();
 }
 //Runs the game, is used to update game
 void draw(){
