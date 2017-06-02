@@ -16,7 +16,7 @@ void initOkButton() {
   textAlign(CENTER, CENTER);
   fill(255);
   textSize(10);
-<<<<<<< HEAD
+//<<<<<<< HEAD
   text("Options", optionsX + (optionsWidth / 2), optionsY + (optionsHeight/2));
 }
 
@@ -55,6 +55,7 @@ boolean valid(int x1, int x2, int y1, int yx){
   }
   
   return containsWord(word);
+}
 =======
   text("OK", okXcor + (optionsWidth / 2), okYcor + (optionsHeight/2));
 >>>>>>> c070daa6653553462c58a55dea95d873ed95bf20
