@@ -125,7 +125,7 @@ void mousePressed(){
         board[xcor] [ycor].setLetter(adding);
         player.addCurrent(adding);
         board[xcor][ycor].full();
-        System.out.println(board[xcor][ycor].getLetter());
+        //System.out.println(board[xcor][ycor].getLetter());
         board[xcor][ycor].display();
         adding.fill = 100;
         adding = null;

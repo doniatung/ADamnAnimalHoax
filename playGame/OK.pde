@@ -12,12 +12,13 @@ void initOkButton() {
   if (active)
     strokeWeight(2);
   else noStroke();
+  fill(0);
   rect(okXcor, okYcor, optionsWidth, optionsHeight, 7);
   textAlign(CENTER, CENTER);
   fill(255);
   textSize(10);
 //<<<<<<< HEAD
-  text("Options", optionsX + (optionsWidth / 2), optionsY + (optionsHeight/2));
+  text("OK", okXcor + (optionsWidth / 2), okYcor + (optionsHeight/2));
 }
 
 boolean valid(int x1, int x2, int y1, int y2){
