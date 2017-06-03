@@ -137,7 +137,7 @@ public class Trie{
 	int totalWords = 0;
 	ArrayList<String> dict = new ArrayList<String>();
 	try{
-	    newFile = new File("words.txt");
+	    newFile = new File("20k.txt");
 	    scan = new Scanner(newFile);
 
 	    while (scan.hasNext()){

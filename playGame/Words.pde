@@ -3,7 +3,7 @@ Trie createDictionary(){
   String word;
   Trie mytree = new Trie();
   int totalWords = 0;
-  String[] lines = loadStrings("words.txt");
+  String[] lines = loadStrings("20k.txt");
   for (int x = 0; x < lines.length; x++){
     word = lines[x];
     System.out.println("Word added to tree: " + word);
