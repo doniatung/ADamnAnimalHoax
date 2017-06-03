@@ -11,7 +11,7 @@ void setup(){
   size(650,650);
   img = loadImage("startScreen.png");
   initGrid();
-  dictionary = createDictionary();
+  //dictionary = createDictionary();
 }
 //Runs the game, is used to update game
 void draw(){
