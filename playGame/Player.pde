@@ -30,6 +30,10 @@ public class Player{
     ArrayList<Tile> getHand(){
   return hand;
     }
+    
+    ArrayList<Tile> getCurrent(){
+      return current;
+    }
   
     //removes tiles from player's hand, based on 'current' 
     void remove(){
@@ -52,9 +56,9 @@ public class Player{
     }
 
 //prints out player's hand
-    public void string(){
-  for (int i = 0; i < hand.size(); i ++){
-      System.out.println( hand.get(i).getLetter() );
+void string(){
+  for (int i = 0; i < current.size(); i ++){
+      System.out.println( current.get(i).getLetter() );
   }
     }
 

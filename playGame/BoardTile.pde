@@ -15,6 +15,13 @@ public class BoardTile {
 
 
   //creates a new board tile
+  /*public BoardTile(Tile tile, int newXPos, int newYPos){
+    type = tile.getLetter();
+    xpos = newXPos;
+    ypos = newYpos;
+  }*/
+  
+  
   public BoardTile(String tileType, int newXPos, int newYPos) {
     type = tileType;
     if (type.equals("red") || type.equals("darkBlue")) {

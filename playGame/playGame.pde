@@ -97,6 +97,7 @@ void mousePressed(){
     
     int xcor = boardX();
     int ycor = boardY();
+    //System.out.println(tileLocations[0]);
     if (over1()){
       adding = player.getHand().get(0);
     }
@@ -120,16 +121,18 @@ void mousePressed(){
     }   
     if (xcor != -1 && ycor != -1){
       if (adding != null){
-        //System.out.println(xcor);
-        //System.out.println(ycor);
         board[xcor] [ycor].setLetter(adding);
-        player.addCurrent(adding);
         board[xcor][ycor].full();
-        //System.out.println(board[xcor][ycor].getLetter());
         board[xcor][ycor].display();
         adding.fill = 100;
         adding = null;
         redraw();
+        int x = 0;
+        while (tileLocations[x][0] != 0 ){
+          x ++;
+        } 
+        tileLocations[x][0] = xcor;
+        tileLocations[x][1] = ycor;
       }
     }
   }

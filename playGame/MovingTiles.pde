@@ -1,3 +1,5 @@
+int[][] tileLocations = new int[7][7];
+
 int boardX(){
   for (int i = 0; i < 15; i ++){
     if (mouseX >= board[i][0].getX() && mouseX <=  board[i][0].getX() + 30){
