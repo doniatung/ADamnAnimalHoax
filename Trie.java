@@ -129,18 +129,6 @@ public class Trie{
 	return size;
     }
 
-    //minimizes tree
-    public void minimize(){
-        minimize(alphabet, root)
-    }
-
-    /*
-    public void minimize(char[] alpha, Node start){
-	for (int x = 0; x < alphabet ){
-	}
-    }*/
-    
-
     public static void main (String args[]){
         File newFile;
 	String word;
@@ -149,7 +137,7 @@ public class Trie{
 	int totalWords = 0;
 	ArrayList<String> dict = new ArrayList<String>();
 	try{
-	    newFile = new File("samplewords.txt");
+	    newFile = new File("words.txt");
 	    scan = new Scanner(newFile);
 
 	    while (scan.hasNext()){
