@@ -3,6 +3,7 @@ int okXcor = 545;
 int okYcor = height + 350;
 final color activeButton = color(#03C6FF);
 final color inactiveButton = color(#C5ECF7);
+String word = null;
 
 
 void initOkButton() {
@@ -48,8 +49,6 @@ boolean valid(int x1, int x2, int y1, int y2){
       }
     }
   }
-  
-  String word = null;
   if (x1 == x2){
     for (int z = min(y1, y2); z <= max(y1, y2); z++){
        word += board[x1][z];
