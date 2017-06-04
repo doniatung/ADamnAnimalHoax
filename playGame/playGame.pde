@@ -2,7 +2,7 @@ int screen = 0;
 PImage img;
 BoardTile[][] board = new BoardTile[15][15];
 Player player = new Player();
-Tile adding = new Tile();
+Tile adding;
 int numBackground = 255;
 Trie dictionary;
 ArrayList<Tile> letters = new ArrayList<Tile>();
@@ -123,6 +123,17 @@ void mousePressed(){
     }   
     if (xcor != -1 && ycor != -1){
       if (adding != null){
+        
+        if (player.firstX == -10){
+          System.out.println("Changing firstxy  " + xcor + ycor);
+          player.firstX = xcor;
+          player.firstY = ycor;
+        }
+        
+        player.lastX = xcor;
+        player.lastY = ycor;
+        
+        
         board[xcor] [ycor].setLetter(adding);
         board[xcor][ycor].full();
         board[xcor][ycor].display();

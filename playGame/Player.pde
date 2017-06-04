@@ -4,11 +4,13 @@ public class Player {
   String name; //Player's name
   ArrayList<Tile> hand; //Player's hand
   ArrayList<Tile> current; //Tiles in play
+  int firstX, firstY, lastX, lastY = -10;
 
   public Player() {
     name = "Player 1";
     hand = new ArrayList<Tile>();
     current = new ArrayList<Tile>();
+    firstX = -10;
   }
 
   public Player(String name) {

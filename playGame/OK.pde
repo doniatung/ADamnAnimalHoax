@@ -89,7 +89,8 @@ void ok(){
       }
       System.out.println(y.size());
       for (int i = 1; i < y.size() -1; i ++){
-        if(! valid (tileLocations[i][0], tileLocations[i+1][0], tileLocations[i][1], tileLocations[i+1][1]))
+        System.out.println("Player First X: " + player.firstX + "\t Player First Y: " + player.firstY + "\t Player last X: " + player.lastX + "\t Player last Y: " + player.lastY);
+        if(! valid (player.firstX, player.lastX, player.firstY, player.lastY))
         {
           System.out.println("lol sorry");//put the letters back
           int a = 0;
@@ -98,10 +99,10 @@ void ok(){
             return;
         }      
       }
-        containsWord(word);
+        //containsWord(word);
         player.remove();
         System.out.println("ganggg you made a valid word");//make the letters stay on board, draw new ones
-        addTiles();  
+        addTiles();
       }  
   }
 }

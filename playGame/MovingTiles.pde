@@ -2,7 +2,8 @@ int[][] tileLocations = new int[7][7];
 
 int boardX(){
   for (int i = 0; i < 15; i ++){
-    if (mouseX >= board[i][0].getX() && mouseX <=  board[i][0].getX() + 30){
+    if ((mouseX >= board[i][0].getX() && mouseX <=  board[i][0].getX() + 30)){
+      System.out.println("BoardX: " + i);
       return i;
     }
   }
@@ -15,7 +16,8 @@ void addTiles(){
 
 int boardY(){
   for (int i = 0; i < 15; i ++){
-    if (mouseY >= board[0][i].getY() && mouseY <=  board[0][i].getY() + 30){
+    if ((mouseY >= board[0][i].getY() && mouseY <=  board[0][i].getY() + 30)){
+      System.out.println("BoardY: " + i);
       return i;
     }
   }
