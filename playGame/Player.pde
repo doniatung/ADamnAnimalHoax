@@ -41,7 +41,7 @@ public class Player {
       for (int y = 0; y < current.size(); y++) {
         if (hand.get(x).equals(current.get(y))) {
           hand.remove(x);
-          break;
+          //break;
         }
       }
     }

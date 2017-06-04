@@ -9,6 +9,10 @@ int boardX(){
   return -1;
 }
 
+void addTiles(){
+   tileLocations = new int[7][7];
+}
+
 int boardY(){
   for (int i = 0; i < 15; i ++){
     if (mouseY >= board[0][i].getY() && mouseY <=  board[0][i].getY() + 30){

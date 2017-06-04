@@ -63,7 +63,6 @@ boolean valid(int x1, int x2, int y1, int y2){
   }
   System.out.println("damn, valid.");
   return true;
-  //return containsWord(word);
 }
 
 boolean containsWord(String word){
@@ -82,16 +81,26 @@ boolean overOK()  {
 
 void ok(){
     if (player.getCurrent().size() != 0){
-    ArrayList<Tile> y = player.getCurrent();
-    System.out.println(y.size());
-    for (int i = 1; i < y.size() ; i ++){
-      if(valid (tileLocations[i][0], tileLocations[i+1][0], tileLocations[i][1], tileLocations[i+1][1]))
-      {
-        System.out.println("ganggg you made a valid word");//make the letters stay on board, draw new ones
+      ArrayList<Tile> y = player.getCurrent();
+      String word = "";
+      for (int i = 0; i < y.size(); i++){
+        word += y.get(i);
       }
-      else{
-        System.out.println("lol sorry");//put the letters back
-      }       
-    }
+      System.out.println(y.size());
+      for (int i = 1; i < y.size() -1; i ++){
+        if(! valid (tileLocations[i][0], tileLocations[i+1][0], tileLocations[i][1], tileLocations[i+1][1]))
+        {
+          System.out.println("lol sorry");//put the letters back
+          int a = 0;
+          while ( tileLocations[a][0] != 0){
+            board[tileLocations[a][0]][tileLocations[a][1]].remove();
+            return;
+        }      
+      }
+        containsWord(word);
+        player.remove();
+        System.out.println("ganggg you made a valid word");//make the letters stay on board, draw new ones
+        addTiles();  
+      }  
   }
 }

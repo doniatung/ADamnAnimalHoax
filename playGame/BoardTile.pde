@@ -56,6 +56,11 @@ public class BoardTile {
     letter = x.getLetter();
     }
   }
+  
+  public void remove(){
+    filled = false;
+    letter = "";
+  }
 
   //returns multiplier of boardTile
   public int getMult() {
