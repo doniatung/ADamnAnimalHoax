@@ -22,6 +22,8 @@ void initOkButton() {
   text("OK", okXcor + (optionsWidth / 2), okYcor + (optionsHeight/2));
 }
 
+
+//takes int coordinates of the start and end of a word, checks if the word is valid
 boolean valid(int x1, int x2, int y1, int y2){
   //if word is not in one line
   System.out.println(x1 + " " + x2 + " " + y1 + " " + y2);
