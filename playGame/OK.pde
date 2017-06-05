@@ -26,7 +26,7 @@ void initOkButton() {
 //takes int coordinates of the start and end of a word, checks if the word is valid
 boolean valid(int x1, int x2, int y1, int y2){
   //if word is not in one line
-  System.out.println(x1 + " " + x2 + " " + y1 + " " + y2);
+  //System.out.println(x1 + " " + x2 + " " + y1 + " " + y2);
   if (( x1 !=  x2) && ( y1 !=  y2)){ 
     System.out.println(false + "1");
     return false;}
@@ -62,7 +62,7 @@ boolean valid(int x1, int x2, int y1, int y2){
        word += board[z][y1];
     }
   }
-  System.out.println("damn, valid.");
+  //System.out.println("damn, valid.");
   return true;
 }
 
@@ -88,7 +88,7 @@ void ok(){
         word += y.get(i);
       }
       System.out.println(y.size());
-      for (int i = 1; i < y.size() -1; i ++){
+
         System.out.println("Player First X: " + player.firstX + "\t Player First Y: " + player.firstY + "\t Player last X: " + player.lastX + "\t Player last Y: " + player.lastY);
         if(! valid (player.firstX, player.lastX, player.firstY, player.lastY))
         {
@@ -100,9 +100,13 @@ void ok(){
         }      
       }
         //containsWord(word);
-        player.remove();
-        System.out.println("ganggg you made a valid word");//make the letters stay on board, draw new ones
+        for (int i = 1; i < y.size() -1; i ++){
+          player.remove();
+        //System.out.println("ganggg you made a valid word");
+        //make the letters stay on board, draw new ones
         addTiles();
-      }  
+        }
+      System.out.println("input valid");
+      player.firstX = -10;
   }
 }
