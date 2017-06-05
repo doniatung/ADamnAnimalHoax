@@ -3,7 +3,7 @@ int okXcor = 545;
 int okYcor = height + 350;
 final color activeButton = color(#03C6FF);
 final color inactiveButton = color(#C5ECF7);
-String word = null;
+String word = "";
 
 
 void initOkButton() {
@@ -53,17 +53,21 @@ boolean valid(int x1, int x2, int y1, int y2){
   }
   if (x1 == x2){
     for (int z = min(y1, y2); z <= max(y1, y2); z++){
-       word += board[x1][z];
+       word += board[x1][z].getLetter();
+       System.out.println("Word is: " + word);
     }
   }
   
   if (y1 == y2){
     for (int z = min(x1, x2); z <= max(x1, x2); z++){
-       word += board[z][y1];
+       word += board[z][y1].getLetter();
+       System.out.println("Word is: " + word);
     }
   }
-  containsWord(word);
-  return true;
+  System.out.println("Word is: " + word);
+  word = word.toLowerCase();
+  System.out.println("Dict value is: " + dictionary.containsWord(word));
+  return dictionary.containsWord(word);
 }
 
 boolean containsWord(String word){

@@ -88,7 +88,7 @@ public class Trie{
     }
 
     //checks if word is contained in Trie
-    private boolean contains(char[] word, boolean isWord){
+    public boolean contains(char[] word, boolean isWord){
   Node node = getNode(word);
   return (node != null && node.isWord() && isWord) ||
       (!isWord && node != null);
