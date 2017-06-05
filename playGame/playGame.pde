@@ -16,6 +16,8 @@ void setup(){
   initLetters();
   initGrid();
   dictionary = createDictionary();
+  player1.setUp();
+  player2.setUp();
 }
 //Runs the game, is used to update game
 void draw(){
@@ -61,8 +63,6 @@ void gameScreen(){
     }
   }
   rect(100, height - 100, 400, 75);
-  player1.setUp();
-  player2.setUp();
   int x = 135;
   for (int i = 0; i < currentPlayer.getHand().size(); i ++){
     int y = height - 70;
