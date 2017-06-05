@@ -130,6 +130,11 @@ void ok(){
         addTiles();
         }
       System.out.println("input valid");
+      while (currentPlayer.getHand().size() < 7){
+              int index = (int)(Math.random()*letters.size());
+              Tile a = letters.get(index);
+              currentPlayer.give(a);
+      }
       currentPlayer.firstX = -10;
       int x = currentPlayer.currentSum();
       currentPlayer.addToScore(x);
