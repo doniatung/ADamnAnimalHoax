@@ -62,7 +62,7 @@ boolean valid(int x1, int x2, int y1, int y2){
        word += board[z][y1];
     }
   }
-  //System.out.println("damn, valid.");
+  containsWord(word);
   return true;
 }
 
@@ -80,33 +80,57 @@ boolean overOK()  {
   }
 }
 
+void switchPlayers(){
+  if (currentPlayer == player1){
+    currentPlayer = player2;
+  }
+  else{
+    currentPlayer = player1;
+  }
+  
+}
+
 void ok(){
-    if (player.getCurrent().size() != 0){
-      ArrayList<Tile> y = player.getCurrent();
+    if (currentPlayer.getCurrent().size() != 0){
+      ArrayList<Tile> y = currentPlayer.getCurrent();
       String word = "";
       for (int i = 0; i < y.size(); i++){
         word += y.get(i);
       }
       System.out.println(y.size());
 
-        System.out.println("Player First X: " + player.firstX + "\t Player First Y: " + player.firstY + "\t Player last X: " + player.lastX + "\t Player last Y: " + player.lastY);
-        if(! valid (player.firstX, player.lastX, player.firstY, player.lastY))
+        System.out.println("Player First X: " + currentPlayer.firstX + "\t Player First Y: " + currentPlayer.firstY + "\t Player last X: " + currentPlayer.lastX + "\t Player last Y: " + currentPlayer.lastY);
+        if(! valid (currentPlayer.firstX, currentPlayer.lastX, currentPlayer.firstY, currentPlayer.lastY))
         {
           System.out.println("lol sorry");//put the letters back
-          int a = 0;
-          while ( tileLocations[a][0] != 0){
-            board[tileLocations[a][0]][tileLocations[a][1]].remove();
-            return;
-        }      
+          if (currentPlayer.firstX == currentPlayer.lastX){
+            int a = currentPlayer.firstY;
+            while (tileLocations[a][0] != 0){
+              board[currentPlayer.firstX][a].remove();
+              a ++;
+            }
+          if (currentPlayer.firstY == currentPlayer.lastY){
+          int b = currentPlayer.firstX;
+          while (tileLocations[b = currentPlayer.firstX][0] != 0){
+            board[b][currentPlayer.firstY].remove();
+              b ++;
+            }
+            
+          }
+        }
+        return;
       }
-        //containsWord(word);
         for (int i = 1; i < y.size() -1; i ++){
-          player.remove();
-        //System.out.println("ganggg you made a valid word");
+          currentPlayer.remove();
         //make the letters stay on board, draw new ones
         addTiles();
         }
       System.out.println("input valid");
-      player.firstX = -10;
+      currentPlayer.firstX = -10;
+      int x = currentPlayer.currentSum();
+      currentPlayer.addToScore(x);
+      switchPlayers();
+    } 
+    
+    
   }
-}
