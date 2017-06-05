@@ -2,6 +2,7 @@ public class BoardTile {
 
   int multVal; //Keeps track of the multiplier for the tile
   boolean filled; //boolean for whetehr the tile is filled 
+  boolean tempFill;
   String letter; //letter the tile is filled with
   String type; //type of tile
   int xpos; //xcor
@@ -40,6 +41,11 @@ public class BoardTile {
     filled = true;
   }
   
+  void tempFill(){
+    tempFill = true;
+  }
+  
+  
   int getX(){
     return xpos;
   }
@@ -55,6 +61,8 @@ public class BoardTile {
     else{
     letter = x.getLetter();
     }
+    tempFill();
+    full();
   }
   
   public void remove(){
