@@ -1,7 +1,9 @@
 int screen = 0;
 PImage img;
 BoardTile[][] board = new BoardTile[15][15];
-Player player = new Player();
+Player player1 = new Player();
+Player player2 = new Player();
+Player currentPlayer = player1;
 Tile adding;
 int numBackground = 255;
 Trie dictionary;
@@ -59,17 +61,22 @@ void gameScreen(){
     }
   }
   rect(100, height - 100, 400, 75);
-  player.setUp();
+  player1.setUp();
+  player2.setUp();
   int x = 135;
-  for (int i = 0; i < player.getHand().size(); i ++){
+  for (int i = 0; i < currentPlayer.getHand().size(); i ++){
     int y = height - 70;
-    Tile a = player.hand.get(i);
+    Tile a = currentPlayer.hand.get(i);
     textAlign(CENTER,CENTER);
     fill(a.fill);
     textSize(55);
     text(a.getLetter(), x, y);
     x += 55;  
   }
+  fill(100);
+  textSize(30);
+  text(currentPlayer.getName(), instructionX + (instructionWidth / 2)+ 10, height / 2);
+  text(currentPlayer.getScore(), instructionX + (instructionWidth / 2), height / 2 + 50);
 }
   
 
@@ -96,42 +103,42 @@ void mousePressed(){
     startGame();
   }
   if (screen == 1){
-    
+    //currentPlayer.string();
     int xcor = boardX();
     int ycor = boardY();
     //System.out.println(tileLocations[0]);
     if (over1()){
-      adding = player.getHand().get(0);
+      adding = currentPlayer.getHand().get(0);
     }
     if (over2()){
-      adding = player.getHand().get(1);
+      adding = currentPlayer.getHand().get(1);
     }
     if (over3()){
-      adding = player.getHand().get(2);
+      adding = currentPlayer.getHand().get(2);
     }
     if (over4()){
-      adding = player.getHand().get(3);
+      adding = currentPlayer.getHand().get(3);
     }
     if (over5()){
-      adding = player.getHand().get(4);
+      adding = currentPlayer.getHand().get(4);
     }
     if (over6()){
-      adding = player.getHand().get(5);
+      adding = currentPlayer.getHand().get(5);
     }
     if (over7()){
-      adding = player.getHand().get(6);
+      adding = currentPlayer.getHand().get(6);
     }   
     if (xcor != -1 && ycor != -1){
       if (adding != null){
         
-        if (player.firstX == -10){
+        if (currentPlayer.firstX == -10){
           System.out.println("Changing firstxy  " + xcor + ycor);
-          player.firstX = xcor;
-          player.firstY = ycor;
+          currentPlayer.firstX = xcor;
+          currentPlayer.firstY = ycor;
         }
         
-        player.lastX = xcor;
-        player.lastY = ycor;
+        currentPlayer.lastX = xcor;
+        currentPlayer.lastY = ycor;
         
         
         board[xcor] [ycor].setLetter(adding);
