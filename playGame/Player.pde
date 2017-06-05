@@ -5,18 +5,22 @@ public class Player {
   ArrayList<Tile> hand; //Player's hand
   ArrayList<Tile> current; //Tiles in play
   int firstX, firstY, lastX, lastY = -10;
+  int score;
+  
 
   public Player() {
     name = "Player 1";
     hand = new ArrayList<Tile>();
     current = new ArrayList<Tile>();
     firstX = -10;
+    score = 0;
   }
 
   public Player(String name) {
     this.name = name;
     hand = new ArrayList<Tile>();
     current = new ArrayList<Tile>();
+    score = 0;
   }
 
   //Adds tile to player's hand
@@ -35,6 +39,31 @@ public class Player {
 
   ArrayList<Tile> getCurrent() {
     return current;
+  }
+  
+  void addToScore(int x){
+    score += x;
+  }
+  
+  int currentSum(){
+    int x = 0;
+    for (int i = 0; i < current.size(); i ++){
+      x += current.get(i).getValue();
+    }
+    return x;
+  }
+  
+  String getScore(){
+    return "" + score;
+  }
+  
+  String getName(){
+    if (currentPlayer == player1){
+      return "Player 1";
+    }
+    else{
+      return "Player 2";
+    }
   }
 
   //removes tiles from player's hand, based on 'current' 
@@ -60,8 +89,10 @@ public class Player {
 
   //prints out player's hand
   void string() {
-    for (int i = 0; i < current.size(); i ++) {
-      System.out.println( current.get(i).getLetter() );
+    for (int i = 0; i < hand.size(); i ++) {
+      System.out.println(hand.size());
+      
+      //System.out.println( hand.get(i).getLetter() );
     }
   }
 }
