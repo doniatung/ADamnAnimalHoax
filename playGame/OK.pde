@@ -53,22 +53,43 @@ boolean valid(int x1, int x2, int y1, int y2){
       }
     }
   if (x1 == x2) {
+    int r = max(x1, x2);
+    //incase word extends past given
+    while(board[x1][r].isFull()){
+      //System.out.println("previous, " + t);
+      currentPlayer.lastY = r;
+      System.out.println("New lastY: " + r);
+      r = r+1;
+    }
     int t = min(x1, x2);
+    //incase word goes before given
     while(board[x1][t].isFull()){
       //System.out.println("previous, " + t);
       currentPlayer.firstY = t;
       System.out.println("New firstY: " + t);
       t = t-1;
     }
-    for (int z = t + 1; z <= max(y1, y2); z++){
+    //adds letters
+    for (int z = t + 1; z <= r - 1; z++){
        word += board[x1][z].getLetter();
        System.out.println("Word is: " + word);
     }
   }
   
   if (y1 == y2){
+    
+    int r = min(x1, x2);
+    //System.out.println("t = " + t);
+    while(board[r][y1].isFull()){
+      //System.out.println("previous, " + t);
+      currentPlayer.firstX = r;
+      System.out.println("New lastX: " + r);
+      //word = "";
+      r = r+1;
+    }
+    
     int t = min(x1, x2);
-    System.out.println("t = " + t);
+    //System.out.println("t = " + t);
     while(board[t][y1].isFull()){
       //System.out.println("previous, " + t);
       currentPlayer.firstX = t;
@@ -76,7 +97,7 @@ boolean valid(int x1, int x2, int y1, int y2){
       word = "";
       t = t-1;
     }
-    for (int z = t + 1; z <= max(x1, x2); z++){
+    for (int z = t + 1; z <= r - 1; z++){
        word += board[z][y1].getLetter();
        System.out.println("Word is: " + word);
     }

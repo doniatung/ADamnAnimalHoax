@@ -75,6 +75,8 @@ public class Player {
   void remove() {
     for (int x = 0; x < hand.size(); x++) {
       for (int y = 0; y < current.size(); y++) {
+        System.out.println("Hand size: " + hand.size());
+        System.out.println("Current size: " + current.size());
         if (hand.get(x).equals(current.get(y))) {
           hand.remove(x);
           //break;
