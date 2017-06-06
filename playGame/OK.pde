@@ -25,6 +25,7 @@ void initOkButton() {
 
 //takes int coordinates of the start and end of a word, checks if the word is valid
 boolean valid(int x1, int x2, int y1, int y2){
+  word = "";
   //if word is not in one line
   //System.out.println(x1 + " " + x2 + " " + y1 + " " + y2);
   if (( x1 !=  x2) && ( y1 !=  y2)){ 
@@ -37,35 +38,51 @@ boolean valid(int x1, int x2, int y1, int y2){
   //if there are gaps
   if ( x1 ==  x2){
     for (int z = min(y1, y2); z <= max(y1, y2); z++){
-      if (board[x1][z] == null){
+      if (!board[x1][z].isFull()){
         System.out.println(false + "3");
         return false;
       }
     }
   }
   if ( y1 == y2){
+    }
     for (int z = min(x1, x2); z <= max(x1, x2); z++){
-      if (board[z][y1] == null){
+      if (!board[z][y1].isFull()){
         System.out.println(false + "4");
         return false;
       }
     }
-  }
-  if (x1 == x2){
-    for (int z = min(y1, y2); z <= max(y1, y2); z++){
+  if (x1 == x2) {
+    int t = min(x1, x2);
+    while(board[x1][t].isFull()){
+      //System.out.println("previous, " + t);
+      currentPlayer.firstY = t;
+      System.out.println("New firstY: " + t);
+      t = t-1;
+    }
+    for (int z = t + 1; z <= max(y1, y2); z++){
        word += board[x1][z].getLetter();
        System.out.println("Word is: " + word);
     }
   }
   
   if (y1 == y2){
-    for (int z = min(x1, x2); z <= max(x1, x2); z++){
+    int t = min(x1, x2);
+    System.out.println("t = " + t);
+    while(board[t][y1].isFull()){
+      //System.out.println("previous, " + t);
+      currentPlayer.firstX = t;
+      System.out.println("New firstX: " + t);
+      word = "";
+      t = t-1;
+    }
+    for (int z = t + 1; z <= max(x1, x2); z++){
        word += board[z][y1].getLetter();
        System.out.println("Word is: " + word);
     }
   }
-  System.out.println("Word is: " + word);
   word = word.toLowerCase();
+  System.out.println("Word is: " + word);
   System.out.println("Dict value is: " + dictionary.containsWord(word));
   return dictionary.containsWord(word);
 }
