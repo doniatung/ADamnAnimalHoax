@@ -79,6 +79,7 @@ public class Player {
         System.out.println("Current size: " + current.size());
         if (hand.get(x).equals(current.get(y))) {
           hand.remove(x);
+          current.remove(y);
           //break;
         }
       }

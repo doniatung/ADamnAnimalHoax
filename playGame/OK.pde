@@ -147,9 +147,13 @@ void ok(){
           System.out.println("lol sorry");//put the letters back
           if (currentPlayer.firstX == currentPlayer.lastX){
             int a = currentPlayer.firstY;
-            while (tileLocations[a][0] != 0){
-              board[currentPlayer.firstX][a].remove();
-              a ++;
+            if (a > 6){
+            }
+            else{
+              while (tileLocations[a][0] != 0){
+                board[currentPlayer.firstX][a].remove();
+                a ++;
+              }
             }
           if (currentPlayer.firstY == currentPlayer.lastY){
           int b = currentPlayer.firstX;

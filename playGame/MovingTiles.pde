@@ -1,4 +1,4 @@
-int[][] tileLocations = new int[7][7];
+int[][] tileLocations = new int[7][2];
 
 int boardX(){
   for (int i = 0; i < 15; i ++){
@@ -11,7 +11,7 @@ int boardX(){
 }
 
 void addTiles(){
-   tileLocations = new int[7][7];
+   tileLocations = new int[7][2];
 }
 
 int boardY(){
