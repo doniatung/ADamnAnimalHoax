@@ -47,8 +47,13 @@ public class Player {
   
   int currentSum(){
     int x = 0;
+    int multiplier = 1;
     for (int i = 0; i < current.size(); i ++){
-      x += current.get(i).getValue();
+      int xcor = tileLocations[i] [0];
+      int ycor = tileLocations[i] [1];
+      multiplier = board[xcor][ycor].getMult();
+      x += (current.get(i).getValue() * multiplier);
+      multiplier = 1;
     }
     return x;
   }
