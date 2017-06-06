@@ -88,10 +88,14 @@ public class Player {
 
   //sets up player with random tiles
   void setUp() {
-    for (int i = 0; i < 7; i ++) {
+    if( this.hand.size() < 7 ){
+    while(this.hand.size() < 7) {
       int index = (int)(Math.random()*letters.size());
       Tile a = letters.get(index);
       give(a);
+      letters.remove(index);
+      System.out.println("Size of letters: " + letters.size());
+    }
     }
   }
 
