@@ -10,26 +10,40 @@ Scrabble
 /////////// Zone of Reflection \\\\\\\\\\\
 ------------------------------------------
 OBSTACLES OVERCOME
-
-Dragging tiles to play: How to best calculate which board tile to change, if not precise?
-
-Solution: Either use distance formula or just two clicks instead
+- Dragging tiles to play: How to best calculate which board tile to change, if not precise?
+   - Solution: Either use distance formula or just two clicks instead
+- Getting the word check method to run properly and take into account the tiles already placed on the board.
+- Building a word trie.
+- Displaying the board correctly.
+  - There was a lot of math involved in that.
+- Displaying the player's hand and then switching it to show the other hand of the other player on their turn.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 UNRESOLVED ISSUES
-
-How will the computer take account of the tiles on the board when creating words?
+- How will the computer take account of the tiles on the board when creating words?
+- How to build an AI for Scrabble.
+- Ending the game.
+- Setting up the options pane.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 COOL STUFF LEARNED
+- A DAWG (Directed Acyclic Word Trie) can minimize the Trie that we built.
+  - Even though we didn't implement it, it was cool to learn about.
+- We were able to build a word trie.
+  - Previously we had simply worked with ints in trees, but we built another data structure that also uses Nodes.
+- We learned that rather than using Vectors, which we did not cover, we can use an ArrayList.
+
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 MID-DEVELOPMENT DESIGN CHANGES
-
+- Rather than building an AI, we chose to simply stick to a two player game.
+- We chose not to use a stack for the letters and used an ArrayList instead.
+  - If we used an ArrayList, we would not have been able to choose letters randomly, which we wanted to do.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 LESSONS LEARNED 
-
+- Even if you think an algorithm won't take a long time to implement, it probably will.
+- For harder algorithms, like the one we used for the ok() method, it is best to talk it out with the group.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -88,7 +102,7 @@ MT :: Wrote up the UMLs/flow chart.
 All members :: Researched algorithms for the AI
 DT :: worked on formatting for the instructions. 
 MC :: 
-MT :: 
+MT :: Added Options + Instructions.
 ==============================================================
 
 2017-05-25
@@ -96,7 +110,7 @@ MT ::
 All members :: Discussed algo for AI. Started the Node and Tree class to store solutions. 
 DT :: Created the Options button and made it work for a settings page. 
 MC :: 
-MT :: 
+MT :: Started on the Node class for the Word Trie.
 ==============================================================
 
 2017-05-27
@@ -104,7 +118,7 @@ MT ::
 All members :: 
 DT :: 
 MC :: 
-MT :: 
+MT :: Worked on Node Class for the Word Trie & started Trie class.
 ==============================================================
 
 2017-05-28
@@ -112,7 +126,7 @@ MT ::
 All members :: 
 DT :: Worked on the display of the user's array on the screen.
 MC :: 
-MT :: 
+MT :: Worked on the Trie class. 
 ==============================================================
 
 2017-05-29
@@ -120,7 +134,7 @@ MT ::
 All members :: 
 DT :: 
 MC :: 
-MT :: 
+MT :: Worked on Trie class.
 ==============================================================
 
 2017-05-30
@@ -128,7 +142,7 @@ MT ::
 All members :: 
 DT :: Wrote all of the basic methods for placing a tile on the board. 
 MC :: 
-MT :: 
+MT :: Added descriptive comments.
 ==============================================================
 
 2017-05-31
@@ -136,7 +150,7 @@ MT ::
 All members :: 
 DT :: Continued working on placing tiles on the board and making them stay there. 
 MC :: 
-MT :: 
+MT :: Worked on Trie class.
 ==============================================================
 
 
@@ -145,7 +159,7 @@ MT ::
 All members :: 
 DT :: 
 MC :: 
-MT :: 
+MT :: Worked on displaying the buttons.
 ==============================================================
 
 
@@ -154,7 +168,7 @@ MT ::
 All members :: 
 DT :: sorry I'm a bad team member. 
 MC :: 
-MT :: 
+MT :: Started ok() method functionality to check if word placement was valid.
 ==============================================================
 
 
@@ -163,7 +177,7 @@ MT ::
 All members :: 
 DT :: Tried to get OK to work. Had it working to check if tiles were placed in either a row or a column. 
 MC :: 
-MT :: 
+MT :: Added in a word list to the game by implementing Node and Trie in it.
 ==============================================================
 
 2017-06-04
@@ -186,5 +200,5 @@ MT :: Worked on the UML diagrams.
 All members :: 
 DT :: 
 MC :: 
-MT :: 
+MT :: Worked on UML Diagrams & flowchart.
 ==============================================================
