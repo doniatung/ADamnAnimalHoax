@@ -56,6 +56,7 @@ void gameScreen(){
   background(numBackground); //background(255);
   initInstructButton();
   initOptions();
+  initPass();
   initOkButton();
   for (int x = 0; x < 15; x++){
     for (int y = 0; y < 15; y++){
@@ -93,6 +94,9 @@ void mousePressed(){
   }
   if (screen == 1 && overOK()){
     ok();
+  }
+  if (screen == 1 && overPass()){
+    pass();
   }
   //user calls for options page
   if (screen == 6 || overOptions()){
