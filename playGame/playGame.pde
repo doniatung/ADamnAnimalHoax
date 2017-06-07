@@ -9,6 +9,7 @@ int numBackground = 255;
 Trie dictionary;
 ArrayList<Tile> letters = new ArrayList<Tile>();
 
+
 //sets up the game with board, loads startScreen
 void setup(){
   size(650,650);
@@ -19,6 +20,7 @@ void setup(){
   player1.setUp();
   player2.setUp();
 }
+
 //Runs the game, is used to update game
 void draw(){
  

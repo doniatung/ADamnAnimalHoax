@@ -5,7 +5,6 @@ final color activeButton = color(#03C6FF);
 final color inactiveButton = color(#C5ECF7);
 String word = "";
 
-
 void initOkButton() {
   pushStyle();
   fill(inactiveButton);
@@ -21,7 +20,6 @@ void initOkButton() {
 //<<<<<<< HEAD
   text("OK", okXcor + (optionsWidth / 2), okYcor + (optionsHeight/2));
 }
-
 
 //takes int coordinates of the start and end of a word, checks if the word is valid
 boolean valid(int x1, int x2, int y1, int y2){
@@ -52,6 +50,8 @@ boolean valid(int x1, int x2, int y1, int y2){
         return false;
       }
     }
+    
+    //checking words
   if (x1 == x2) {
     int r = max(x1, x2);
     //incase word extends past given

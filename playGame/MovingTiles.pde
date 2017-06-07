@@ -27,7 +27,7 @@ int boardY(){
 
 
 boolean over1()  {
-  //if the mouse has clicked instructions button
+  //if the mouse is over first letter
   if (mouseX >= 120  && mouseX <= 120 + 55 && 
       mouseY >= height - 100 && mouseY <= height) {
     currentPlayer.addCurrent(currentPlayer.getHand().get(0));
@@ -38,7 +38,7 @@ boolean over1()  {
 }
 
 boolean over2()  {
-  //if the mouse has clicked instructions button
+  //if the mouse is over second letter
   if (mouseX >= 155  && mouseX <= 155 + 55 && 
       mouseY >= height - 100 && mouseY <= height) {
         currentPlayer.addCurrent(currentPlayer.getHand().get(1));
@@ -49,7 +49,7 @@ boolean over2()  {
 }
 
 boolean over3()  {
-  //if the mouse has clicked instructions button
+  //if the mouse is over third letter
   if (mouseX >= 210  && mouseX <= 210 + 55 && 
       mouseY >= height - 100 && mouseY <= height) {
         currentPlayer.addCurrent(currentPlayer.getHand().get(2));
@@ -60,7 +60,7 @@ boolean over3()  {
 }
 
 boolean over4()  {
-  //if the mouse has clicked instructions button
+  //if the mouse is over fourth letter
   if (mouseX >= 265  && mouseX <= 265 + 55 && 
       mouseY >= height - 100 && mouseY <= height) {
         currentPlayer.addCurrent(currentPlayer.getHand().get(3));
@@ -71,7 +71,7 @@ boolean over4()  {
 }
 
 boolean over5()  {
-  //if the mouse has clicked instructions button
+  //if the mouse is over 5th letter
   if (mouseX >= 320  && mouseX <= 320 + 55 && 
       mouseY >= height - 100 && mouseY <= height) {
         currentPlayer.addCurrent(currentPlayer.getHand().get(4));
@@ -82,7 +82,7 @@ boolean over5()  {
 }
 
 boolean over6()  {
-  //if the mouse has clicked instructions button
+  //if the mouse is over 6th letter
   if (mouseX >= 375  && mouseX <= 375 + 55 && 
       mouseY >= height - 100 && mouseY <= height) {
         currentPlayer.addCurrent(currentPlayer.getHand().get(5));
@@ -93,7 +93,7 @@ boolean over6()  {
 }
 
 boolean over7()  {
-  //if the mouse has clicked instructions button
+  //if the mouse is over 7th letter
   if (mouseX >= 430  && mouseX <= 430 + 55 && 
       mouseY >= height - 100 && mouseY <= height) {
        currentPlayer.addCurrent(currentPlayer.getHand().get(6));

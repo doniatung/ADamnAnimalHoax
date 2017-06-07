@@ -13,6 +13,7 @@ void initOptions(){
   text("Options", optionsX + (optionsWidth / 2), optionsY + (optionsHeight/2));
 }
 
+
 boolean overOptions(){
   //if user has clicked options page
   if (mouseX >= optionsX  && mouseX <= optionsX + optionsWidth && 
